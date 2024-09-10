@@ -1,0 +1,71 @@
+.book-index {
+  .header-book-index {
+    margin-block-end: 2rem;
+  }
+
+  .main-book-index {
+    .aside-book-index {
+      text-align: start;
+      h2 {
+        font-size: 20px;
+        font-weight: 800;
+      }
+      article {
+        margin-block: 5px;
+        padding: 5px 15px;
+        font-size: 20px;
+        transition: 0.4s;
+        cursor: pointer;
+        &:hover {
+          background-color: $clr5;
+        }
+      }
+    }
+
+    .gallery-book {
+      width: 100%;
+      padding: 5px;
+    }
+  }
+}
+
+//------MD QUERY---------
+
+@include for-mobile-layout {
+  .main-book-index {
+    .aside-book-index {
+      display: none;
+    }
+    .gallery-book {
+      background-color: $clr3;
+    }
+  }
+}
+
+@include for-tablet-narrow-layout {
+  .main-book-index {
+    .aside-book-index {
+      display: none;
+    }
+    .gallery-book {
+      background-color: $clr1;
+      box-shadow: -4px 2px 20px 0px grey;
+    }
+  }
+}
+
+@include for-tablet-narrow-layout {
+  .main-book-index {
+    .aside-book-index {
+      display: none;
+    }
+  }
+}
+
+@include for-tablet-wide-layout {
+  .main-book-index {
+    .aside-book-index {
+      display: block;
+    }
+  }
+}

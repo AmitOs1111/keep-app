@@ -1,0 +1,56 @@
+.main-header-large-search {
+  /* src/FilterBar.css */
+  .filterBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .filterBar__item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-right: 1px solid lightgray;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .filterBar__item:hover {
+    background-color: #f7f7f7;
+    border-radius: 50px;
+  }
+
+  .filterBar__item:last-child {
+    border-right: none;
+  }
+
+  .filterBar__item p {
+    margin: 0;
+    font-weight: 600;
+    color: #222222;
+  }
+
+  .filterBar__searchButton {
+    background-color: #ff385c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .filterBar__searchButton:hover {
+    background-color: #e03550;
+  }
+}

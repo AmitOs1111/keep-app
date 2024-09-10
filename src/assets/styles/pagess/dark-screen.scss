@@ -1,0 +1,48 @@
+.dark-screen {
+  position: absolute;
+  top: 170px;
+  left: -80px;
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+  z-index: 10;
+  opacity: 0.7;
+
+  @include for-mobile-layout {
+    & {
+      // background-color: rgb(206, 200, 84);
+      left: -10px;
+      top: 95px;
+    }
+  }
+
+  @include for-tablet-layout {
+    & {
+      // background-color: rgb(84, 206, 123);
+      left: -30px;
+      top: 95px;
+    }
+  }
+
+  @include for-narrow-layout {
+    & {
+      // background-color: rgb(84, 157, 206);
+      left: -40px;
+      top: 170px;
+    }
+  }
+
+  @include for-normal-layout {
+    & {
+      // background-color: rgb(206, 129, 84);
+      left: -60px;
+    }
+  }
+
+  @include for-wide-layout {
+    & {
+      // background-color: rgb(206, 84, 186);
+      left: -80px;
+    }
+  }
+}

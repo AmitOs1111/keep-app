@@ -1,0 +1,107 @@
+.home-page {
+  .home-page-hero {
+    height: 80vh;
+    margin-block-end: 300px;
+    .img-bg-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+}
+
+//------MD QUERY---------
+
+@include for-mobile-layout {
+  .home-page {
+    // background-color: aqua;
+    .main-header-title {
+      z-index: 10;
+      //   width: 20%;
+      font-size: 30px;
+      //   position: absolute;
+      //   top: calc(50% - 35%);
+      //   left: calc(50% - 30%);
+    }
+    .img-bg-header-women {
+      position: absolute;
+      bottom: -110px;
+      left: -80px;
+      width: 400px;
+    }
+  }
+}
+
+@include for-tablet-narrow-layout {
+  .home-page {
+    // background-color: rgb(0, 255, 60);
+    .main-header-title {
+      z-index: 10;
+      width: 30%;
+      font-size: 40px;
+      position: absolute;
+      top: calc(50% - 35%);
+      left: calc(50% - 30%);
+    }
+
+    .img-bg-header-women {
+      position: absolute;
+      top: calc(80vh - 560px);
+      right: -20%;
+      width: 1000px;
+    }
+  }
+}
+
+@include for-tablet-wide-layout {
+  .home-page {
+    // background-color: rgb(255, 111, 0);
+    .img-bg-header-women {
+      position: absolute;
+      top: calc(80vh - 560px);
+      right: -20%;
+      width: 1000px;
+    }
+  }
+}
+
+@include for-narrow-layout {
+  .home-page {
+    // background-color: rgb(255, 0, 191);
+
+    .img-bg-header-women {
+      position: absolute;
+      top: calc(80vh - 560px);
+      right: -10%;
+      width: 1000px;
+    }
+  }
+}
+
+@include for-normal-layout {
+  .home-page {
+    // background-color: rgb(0, 170, 255);
+    .main-header-title {
+      z-index: 10;
+      width: 30%;
+      font-size: 40px;
+      position: absolute;
+      top: calc(50% - 15%);
+      left: calc(50% - 30%);
+    }
+
+    .img-bg-header-women {
+      //   background-color: aqua;
+      position: absolute;
+      top: calc(80vh - 560px);
+      right: 0;
+      width: 1000px;
+      padding: 0;
+      z-index: 10;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+// SETUP
+@import 'setup/typography';
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+
+// BASICS
+@import 'basics/helpers';
+@import 'basics/base';
+@import 'basics/layout';
+
+// PAGES
+@import 'pages/dark-screen.scss';
+@import 'pages/reservation.scss';
+// @import 'pagess/home-page.scss';
+// @import 'pagess/book-index.scss';
+
+// COMPONENTs
+//----------general app---------
+@import 'components/general/app-loader.scss';
+@import 'components/general/user-msg.scss';
+@import 'components/footer/app-footer.scss';
+
+//----------Header-app---------
+@import 'components/header/app-logo.scss';
+@import 'components/header/user-header.scss';
+@import 'components/header/main-header.scss';
+@import 'components/header/center-main-header.scss';
+@import 'components/header/filter-bar-button.scss';
+@import 'components/header/main-mobile-header.scss';
+@import 'components/header/filter-bar.scss';
+@import 'components/header/header-search-modal.scss';
+@import 'components/header/place-modal.scss';
+@import 'components/header/date-picker-modal.scss';
+@import 'components/header/guest-modal.scss';
+@import 'components/header/nav-menu.scss';
+
+//----------Home-page---------
+@import 'components/home-page/stay-list.scss';
+@import 'components/home-page/preview-card-stay.scss';
+@import 'components/home-page/filter-carousel.scss';
+
+//----------details-page---------
+@import 'components/details/main-stay-details.scss';
+@import 'components/details/gallery-details.scss';
+@import 'components/details/full-gallery.scss';
+@import 'components/reservation/container-reservation-details.scss';
+@import 'components/reservation/price-details.scss';
+@import 'components/details/amenities-details.scss';
+@import 'components/reservation/reservation-card.scss';
+@import 'components/details/reviews-details.scss';
+@import 'components/details/general-info.scss';
+@import 'components/details/mini-info-host.scss';
+@import 'components/details/mini-info-stay.scss';
+
+//----------Become Host---------
+@import 'components/becomeHost/become-host-home.scss';
+@import 'components/becomeHost/become-host-info.scss';
+
+//----------Dashboard---------
+@import 'components/dashboard/dashboard.scss';
+@import 'components/dashboard/nav-dashboard.scss';
+@import 'components/dashboard/deposits-dashboard.scss';
+@import 'components/dashboard/orders-table.scss';
+@import 'components/dashboard/chart-dashboard.scss';
+
+//----------about---------
+@import 'components/about/about-stay.scss';
+// @import 'components/cards';
+// @import 'components/sidebar';
