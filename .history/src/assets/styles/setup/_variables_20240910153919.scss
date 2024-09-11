@@ -1,0 +1,42 @@
+// COLOR PALETTE
+$clr1: #fff;
+$clr2: #222222; //first color text
+$clr3: #ff385c; //logo
+$clr4: #f8385d; //search
+// $clr4: darken($clr3, 30%);
+$clr5: #dddddd; //gray border
+$clr6: #6b6b6b; // second color text
+$clr7: darken($clr5, 30%);
+$clr8: #5d5d5d; // color filter icons
+$clr9: #f7f7f7; // bg footer
+$clr10: #5d5d5d; // color icons carousel
+//-----dashboard------
+$clr11: #fbfbfe; // bgc dashboard
+$clr12: #e6eaf2; // border dashboard
+$clr13: #c1c9d8; // icon dashboard
+$clr14: #eef6ff; // bgc icon dashboard
+$clr15: #2d56ba; // color chart dashboard
+
+//MAIN_BORDER
+$main-border: 1px solid $clr5;
+//BOX_SHADOW
+$main-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+// LAYOUT
+$layoutPaddingMobile: 10px;
+$layoutPaddingTablet: 20px;
+$layoutPaddingNarrow: 30px;
+$layoutPaddingNormal: 50px;
+$layoutPaddingWide: 80px;
+
+// LAYOUT BREAKPOINTS
+$break-mobile: 530px; //for 550px
+$break-tablet: 680px; //for 740px
+$break-narrow: 850px; //950px
+$break-normal: 980px; //for 1140px
+$break-wide: 1480px; //for 1640px
+
+$padded-break-mobile: $break-mobile + $layoutPaddingMobile * 2;
+$padded-break-Tablet: $break-tablet + $layoutPaddingTablet * 2;
+$padded-break-narrow: $break-narrow + $layoutPaddingNarrow * 2;
+$padded-break-normal: $break-normal + $layoutPaddingNormal * 2;
+$padded-break-wide: $break-wide + $layoutPaddingWide * 2;

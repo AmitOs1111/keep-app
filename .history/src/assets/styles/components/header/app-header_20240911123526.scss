@@ -1,0 +1,49 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  border-bottom: $main-border;
+  color: $clr5;
+
+  .container-logo {
+    .app-logo {
+      h1 {
+        font-size: 22px;
+        margin: 0;
+        margin-inline-end: 10px;
+      }
+      img {
+        width: 40px;
+        height: 44px;
+      }
+    }
+    .btn-menu {
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      &:hover {
+        border-radius: 50%;
+        background-color: $clr3;
+      }
+    }
+  }
+
+  .container-search {
+    background-color: $clr3;
+    border-radius: 0.6em;
+    margin-block: 8px;
+    input {
+      font-size: 18px;
+      border: none;
+      background: none;
+      padding: 11px 0px;
+      margin-inline-start: 10px;
+    }
+    button {
+      font-size: 18px;
+      margin-inline-start: 10px;
+      i {
+        color: $clr5;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.app-header {
+  border-bottom: $main-border;
+  color: $clr5;
+
+  .container-logo {
+    .app-logo {
+      background-color: antiquewhite;
+      h1 {
+        font-size: 22px;
+      }
+    }
+    .btn-menu {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
