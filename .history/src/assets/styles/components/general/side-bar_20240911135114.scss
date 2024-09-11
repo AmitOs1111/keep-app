@@ -1,0 +1,12 @@
+.side-bar {
+  transition: opacity 0.4s ease-out;
+  ul {
+    background-color: antiquewhite;
+    li {
+      font-size: 22px;
+      h3 {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -68,12 +68,7 @@ export function SideBar() {
   }, [])
 
   function HtmlContent({ htmlString }) {
-    return (
-      <div
-        className="flex align-center justify-center"
-        dangerouslySetInnerHTML={{ __html: htmlString }}
-      />
-    )
+    return <div dangerouslySetInnerHTML={{ __html: htmlString }} />
   }
 
   function setActive(val) {

@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 export function SideBar() {
-  const [selectedActive, setSelectedActive] = useState('Notes')
-
   const sideBars = [
     { title: '', svg: '' },
     {
@@ -63,35 +61,16 @@ export function SideBar() {
     },
   ]
 
-  useEffect(() => {
-    return setSelectedActive(null)
-  }, [])
-
   function HtmlContent({ htmlString }) {
-    return (
-      <div
-        className="flex align-center justify-center"
-        dangerouslySetInnerHTML={{ __html: htmlString }}
-      />
-    )
-  }
-
-  function setActive(val) {
-    setSelectedActive(val)
+    return <div dangerouslySetInnerHTML={{ __html: htmlString }} />
   }
 
   return (
     <section className="side-bar">
       <ul className="clean-list">
         {sideBars.map((item) => (
-          <li
-            key={item.title}
-            className={`flex align-center ${
-              selectedActive === item.title ? 'active' : ''
-            }`}
-            onClick={() => setActive(item.title)}
-          >
-            <div className="side-bar-icon ">
+          <li key={item.title} className="flex align-center">
+            <div className="side-bar-icon">
               <HtmlContent htmlString={item.svg} />
             </div>
             <h3>{item.title}</h3>

@@ -68,12 +68,7 @@ export function SideBar() {
   }, [])
 
   function HtmlContent({ htmlString }) {
-    return (
-      <div
-        className="flex align-center justify-center"
-        dangerouslySetInnerHTML={{ __html: htmlString }}
-      />
-    )
+    return <div dangerouslySetInnerHTML={{ __html: htmlString }} />
   }
 
   function setActive(val) {
@@ -91,7 +86,7 @@ export function SideBar() {
             }`}
             onClick={() => setActive(item.title)}
           >
-            <div className="side-bar-icon ">
+            <div className="side-bar-icon flex align-center justify-center">
               <HtmlContent htmlString={item.svg} />
             </div>
             <h3>{item.title}</h3>

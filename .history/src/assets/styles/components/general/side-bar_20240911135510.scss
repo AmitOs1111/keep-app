@@ -1,0 +1,19 @@
+.side-bar {
+  transition: opacity 0.4s ease-out;
+  ul {
+    background-color: antiquewhite;
+    li {
+      padding: 5px;
+      margin-block: 15px;
+
+      h3 {
+        font-size: 22px;
+        margin: 0;
+      }
+
+      &:hover {
+        background-color: $clr3;
+      }
+    }
+  }
+}

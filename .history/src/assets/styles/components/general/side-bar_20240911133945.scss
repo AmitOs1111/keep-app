@@ -1,0 +1,19 @@
+.side-bar {
+  transition: hover 0.4s ease-out;
+  ul {
+    background-color: antiquewhite;
+    li {
+      h3 {
+        display: none;
+      }
+    }
+
+    &:hover {
+      li {
+        h3 {
+          display: block;
+        }
+      }
+    }
+  }
+}

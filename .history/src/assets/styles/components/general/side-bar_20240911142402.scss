@@ -1,0 +1,43 @@
+.side-bar {
+  transition: opacity 0.4s ease-out;
+  position: absolute;
+  background-color: #fff;
+
+  ul {
+    min-height: 100vh;
+    z-index: 10;
+
+    li {
+      //   padding: 5px;
+      margin-block: 15px;
+      .side-bar-icon {
+        color: $clr5;
+      }
+      h3 {
+        display: none;
+      }
+
+      &.active {
+        background-color: #fdefc3;
+        border-radius: 0 1em 1em 0;
+      }
+
+      &:hover:not(.active) {
+        background-color: $clr3;
+        border-radius: 0 1em 1em 0;
+      }
+    }
+
+    &:hover {
+      border-right: $main-border;
+      box-shadow: 7px 6px 5px -5px grey;
+      h3 {
+        display: block;
+        font-size: 20px;
+        margin: 0;
+        margin-inline-start: 30px;
+        margin-inline-end: 100px;
+      }
+    }
+  }
+}

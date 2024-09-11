@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 export function SideBar() {
-  const [selectedActive, setSelectedActive] = useState('Notes')
+  const [selectedActive, setSelectedActive] = useState(null)
 
   const sideBars = [
     { title: '', svg: '' },
@@ -68,12 +68,7 @@ export function SideBar() {
   }, [])
 
   function HtmlContent({ htmlString }) {
-    return (
-      <div
-        className="flex align-center justify-center"
-        dangerouslySetInnerHTML={{ __html: htmlString }}
-      />
-    )
+    return <div dangerouslySetInnerHTML={{ __html: htmlString }} />
   }
 
   function setActive(val) {
@@ -82,7 +77,7 @@ export function SideBar() {
 
   return (
     <section className="side-bar">
-      <ul className="clean-list">
+      <ul className="side-bar-icon clean-list">
         {sideBars.map((item) => (
           <li
             key={item.title}
@@ -91,7 +86,22 @@ export function SideBar() {
             }`}
             onClick={() => setActive(item.title)}
           >
-            <div className="side-bar-icon ">
+            <div className="icon">
+              <HtmlContent htmlString={item.svg} />
+            </div>
+          </li>
+        ))}
+      </ul>
+      <ul className="side-bar-title clean-list">
+        {sideBars.map((item) => (
+          <li
+            key={item.title}
+            className={`flex align-center ${
+              selectedActive === item.title ? 'active' : ''
+            }`}
+            onClick={() => setActive(item.title)}
+          >
+            <div className="side-bar-icon">
               <HtmlContent htmlString={item.svg} />
             </div>
             <h3>{item.title}</h3>
