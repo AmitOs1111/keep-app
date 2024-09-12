@@ -7,39 +7,23 @@ import { ImgNote } from '../note/img-note.jsx'
 
 import { useForm } from '../../customHooks/useForm.js'
 
-export function PrepareNote({ addNoteToList, typeNote }) {
+export function PrepareNote({ togglePrepare, typeNote }) {
   const [newNote, setNewNote, handelChange] = useForm({ title: '', txt: '' })
-
-  function changeContent(val) {
-    setNewNote((prevNewNote) => ({ ...prevNewNote, ...val }))
-  }
-
-  function onAddNote() {
-    // console.log('newNote:', newNote)
-    const info = { type: typeNote, ...newNote }
-    addNoteToList(info)
-  }
-
   return (
     <section className="prepare-note ">
       <div className="header-prepare-note flex space-between align-center">
-        <input
-          type="text"
-          placeholder="title"
-          name="title"
-          onChange={handelChange}
-        />
+        <input type="text" placeholder="title" />
         <div className="mark">
           <i className="fa-solid fa-thumbtack"></i>
         </div>
       </div>
 
       <div className="main-prepare-note">
-        <DynamicCmp cmpType={typeNote} changeContent={changeContent} />
+        <DynamicCmp cmpType={typeNote} />
       </div>
 
       <div className="tools-bar flex space-between align-center">
-        <button onClick={() => onAddNote()}>close</button>
+        <button onClick={() => togglePrepare()}>close</button>
         <ToolsBar />
       </div>
     </section>
@@ -49,13 +33,13 @@ export function PrepareNote({ addNoteToList, typeNote }) {
 function DynamicCmp(props) {
   switch (props.cmpType) {
     case 'txt':
-      return <TxtNote changeContent={props.changeContent} />
+      return <TxtNote />
 
     case 'list':
-      return <ListNote changeContent={props.changeContent} />
+      return <ListNote />
 
     case 'img':
-      return <ImgNote changeContent={props.changeContent} />
+      return <ImgNote />
 
     // case 'video':
     // return <GuestModal onSetFilterByEdit={props.onSetFilterByEdit} />

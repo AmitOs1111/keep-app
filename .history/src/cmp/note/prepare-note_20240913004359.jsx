@@ -7,7 +7,7 @@ import { ImgNote } from '../note/img-note.jsx'
 
 import { useForm } from '../../customHooks/useForm.js'
 
-export function PrepareNote({ addNoteToList, typeNote }) {
+export function PrepareNote({ addNote, typeNote }) {
   const [newNote, setNewNote, handelChange] = useForm({ title: '', txt: '' })
 
   function changeContent(val) {
@@ -15,9 +15,9 @@ export function PrepareNote({ addNoteToList, typeNote }) {
   }
 
   function onAddNote() {
-    // console.log('newNote:', newNote)
+    console.log('newNote:', newNote)
     const info = { type: typeNote, ...newNote }
-    addNoteToList(info)
+    addNote(info)
   }
 
   return (

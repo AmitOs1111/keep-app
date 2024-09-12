@@ -7,28 +7,18 @@ import { ImgNote } from '../note/img-note.jsx'
 
 import { useForm } from '../../customHooks/useForm.js'
 
-export function PrepareNote({ addNoteToList, typeNote }) {
+export function PrepareNote({ addNote, typeNote }) {
   const [newNote, setNewNote, handelChange] = useForm({ title: '', txt: '' })
 
   function changeContent(val) {
+    console.log('val:', val)
     setNewNote((prevNewNote) => ({ ...prevNewNote, ...val }))
-  }
-
-  function onAddNote() {
-    // console.log('newNote:', newNote)
-    const info = { type: typeNote, ...newNote }
-    addNoteToList(info)
   }
 
   return (
     <section className="prepare-note ">
       <div className="header-prepare-note flex space-between align-center">
-        <input
-          type="text"
-          placeholder="title"
-          name="title"
-          onChange={handelChange}
-        />
+        <input type="text" placeholder="title" />
         <div className="mark">
           <i className="fa-solid fa-thumbtack"></i>
         </div>
@@ -39,7 +29,7 @@ export function PrepareNote({ addNoteToList, typeNote }) {
       </div>
 
       <div className="tools-bar flex space-between align-center">
-        <button onClick={() => onAddNote()}>close</button>
+        <button onClick={() => addNote()}>close</button>
         <ToolsBar />
       </div>
     </section>

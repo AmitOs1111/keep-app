@@ -41,12 +41,11 @@ function get(entityType, entityId) {
 }
 
 function post(entityType, newEntity) {
-  const note = _createNote(newEntity)
-
+  newEntity._id = _makeId()
   return query(entityType).then((entities) => {
-    entities.unshift(note)
+    entities.unshift(newEntity)
     _save(entityType, entities)
-    return note
+    return newEntity
   })
 }
 
@@ -82,14 +81,4 @@ function _makeId(length = 5) {
     text += possible.charAt(Math.floor(Math.random() * possible.length))
   }
   return text
-}
-
-function _createNote(newInfo) {
-  return {
-    _id: _makeId(),
-    isPinned: false,
-    createdAt: new Date(),
-    style: { backgroundColor: '#fff' },
-    info: { ...newInfo, todos: [], src: '', videoId: {} },
-  }
 }

@@ -1,5 +1,5 @@
 .side-bar {
-  transition: opacity 0.4s ease-out;
+  transition: scale 1.4s ease-out;
   position: absolute;
   background-color: #fff;
   z-index: 10;
@@ -13,7 +13,8 @@
         color: $clr5;
       }
       h3 {
-        display: none;
+        // display: none;
+        transform: scale(0);
       }
 
       &.active {
@@ -31,7 +32,8 @@
       border-right: $main-border;
       box-shadow: 7px 6px 5px -5px grey;
       h3 {
-        display: block;
+        // display: block;
+        transform: scale(1);
         font-size: 20px;
         margin: 0;
         margin-inline-start: 30px;
