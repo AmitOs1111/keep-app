@@ -1,0 +1,20 @@
+.btn-prepare-note {
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  width: 600px;
+  margin-block: 30px;
+  border-radius: 0.5em;
+  border: $main-border;
+
+  .btn-prepare-note-content {
+    padding: 10px 20px;
+    h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+    .box-type-note {
+      background-color: antiquewhite;
+      width: 6em;
+    }
+  }
+}

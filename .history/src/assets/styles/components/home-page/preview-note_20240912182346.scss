@@ -1,0 +1,20 @@
+article.container-note {
+  position: relative;
+  max-width: 300px;
+  break-inside: avoid-column;
+  margin-block-end: 20px;
+}
+
+.note-card {
+  border: 1px solid var(--clr-border1);
+  border-radius: 0.8em;
+}
+
+.note-card:hover {
+  border-radius: 0.8em;
+  box-shadow: 0 0 4px 0px;
+}
+
+.preview-note {
+  padding: 20px;
+}
