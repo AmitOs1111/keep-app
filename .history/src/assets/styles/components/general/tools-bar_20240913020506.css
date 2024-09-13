@@ -1,0 +1,16 @@
+.tools-bar {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      margin-inline-start: 15px;
+      i {
+        font-size: 20px;
+        color: $clr5;
+      }
+    }
+  }
+}
