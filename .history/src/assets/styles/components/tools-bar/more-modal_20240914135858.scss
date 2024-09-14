@@ -1,0 +1,13 @@
+.more-modal {
+  .more-modal-list {
+    display: flex;
+    flex-direction: column;
+    li {
+      padding-left: 0;
+      justify-content: start;
+      &:hover {
+        background-color: $clr6;
+      }
+    }
+  }
+}

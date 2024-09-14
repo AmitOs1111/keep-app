@@ -3,14 +3,10 @@ import { SharingModal } from '../../cmp/tools-bar/sharing-modal.jsx'
 import { ReminderModal } from '../../cmp/tools-bar/reminder-modal.jsx'
 import { MoreModal } from '../../cmp/tools-bar/more-modal.jsx'
 
-export function ModalToolsBar({ typeModal, changeColor, onRemoveNote }) {
+export function ModalToolsBar({ typeModal, changeColor }) {
   return (
     <section className="modal-tools-bar">
-      <DynamicCmp
-        cmpType={typeModal}
-        changeColor={changeColor}
-        onRemoveNote={onRemoveNote}
-      />
+      <DynamicCmp cmpType={typeModal} changeColor={changeColor} />
     </section>
   )
 }
@@ -27,6 +23,6 @@ function DynamicCmp(props) {
       return <ReminderModal />
 
     case 'more':
-      return <MoreModal onRemoveNote={props.onRemoveNote} />
+      return <MoreModal />
   }
 }

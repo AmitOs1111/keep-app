@@ -19,11 +19,7 @@ export function EditNote({ note }) {
   }
   return (
     <section className="edit-note">
-      <ToolsBar
-        onRemoveNote={onRemoveNote}
-        clickedTool={clickedTool}
-        changeColor={changeColor}
-      />
+      <ToolsBar clickedTool={clickedTool} changeColor={changeColor} />
     </section>
   )
 }

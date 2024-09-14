@@ -1,0 +1,11 @@
+.more-modal {
+  background-color: antiquewhite;
+  .more-modal-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    li {
+      //   padding: 5px;
+    }
+  }
+}

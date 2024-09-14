@@ -2,16 +2,11 @@ import { useState } from 'react'
 
 import { ModalToolsBar } from '../../cmp/tools-bar/modal-tools-bar.jsx'
 
-export function ToolsBar({ clickedTool, changeColor, onRemoveNote = null }) {
+export function ToolsBar({ clickedTool, changeColor }) {
   const [typeModal, setTypeModal] = useState(null)
 
   function onClickedTool(type) {
-    if (
-      type === 'style' ||
-      type === 'sharing' ||
-      type === 'reminder' ||
-      type === 'more'
-    ) {
+    if (type === 'style' || type === 'sharing' || type === 'reminder') {
       if (typeModal === type) setTypeModal(null)
       else setTypeModal(type)
     }
@@ -50,11 +45,7 @@ export function ToolsBar({ clickedTool, changeColor, onRemoveNote = null }) {
       </ul>
 
       {typeModal && (
-        <ModalToolsBar
-          typeModal={typeModal}
-          onRemoveNote={onRemoveNote}
-          changeColor={changeColor}
-        />
+        <ModalToolsBar typeModal={typeModal} changeColor={changeColor} />
       )}
     </section>
   )

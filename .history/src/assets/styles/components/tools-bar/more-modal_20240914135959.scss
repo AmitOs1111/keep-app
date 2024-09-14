@@ -1,0 +1,16 @@
+.more-modal {
+  .more-modal-list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    li {
+      padding-left: 0;
+      justify-content: start;
+      &:hover {
+        background-color: $clr4;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.more-modal {
+  background-color: antiquewhite;
+  .more-modal-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    li {
+      text-align: start;
+      //   padding: 5px;
+    }
+  }
+}

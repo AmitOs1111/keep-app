@@ -27,6 +27,6 @@ function DynamicCmp(props) {
       return <ReminderModal />
 
     case 'more':
-      return <MoreModal onRemoveNote={props.onRemoveNote} />
+      return <MoreModal onRemoveNote={onRemoveNote} />
   }
 }
