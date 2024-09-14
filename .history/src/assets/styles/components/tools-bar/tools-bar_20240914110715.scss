@@ -1,0 +1,16 @@
+.tools-bar {
+  position: relative;
+  ul {
+    margin-block: 5px;
+    li {
+      display: flex;
+      align-items: center;
+      margin-inline-start: 15px;
+      cursor: pointer;
+      i {
+        font-size: 20px;
+        /* color: $clr5;  */
+      }
+    }
+  }
+}
