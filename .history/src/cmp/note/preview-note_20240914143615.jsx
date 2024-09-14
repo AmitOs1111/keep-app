@@ -1,8 +1,4 @@
-import { useNavigate } from 'react-router-dom'
-
 export function PreviewNote({ note }) {
-  const navigate = useNavigate()
-
   function getContent() {
     switch (note.info.type) {
       case 'txt':
@@ -20,7 +16,6 @@ export function PreviewNote({ note }) {
 
   function onEditContentNote() {
     console.log('onEditContentNote():')
-    navigate(`/note/${note._id}`)
   }
 
   return (

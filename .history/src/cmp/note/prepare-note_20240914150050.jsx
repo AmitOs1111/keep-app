@@ -49,11 +49,7 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
       </div>
 
       <div className="main-prepare-note">
-        <DynamicCmp
-          cmpType={typeNote}
-          value={info.txt}
-          changeContent={changeContent}
-        />
+        <DynamicCmp cmpType={typeNote} changeContent={changeContent} />
       </div>
 
       <div className="note-footer flex space-between align-center">
@@ -67,7 +63,7 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
 function DynamicCmp(props) {
   switch (props.cmpType) {
     case 'txt':
-      return <TxtNote changeContent={props.changeContent} value={props.value} />
+      return <TxtNote changeContent={props.changeContent} />
 
     case 'list':
       return <ListNote changeContent={props.changeContent} />

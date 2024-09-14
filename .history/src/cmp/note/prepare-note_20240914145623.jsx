@@ -9,6 +9,7 @@ import { useForm } from '../../customHooks/useForm.js'
 import { noteService } from '../../services/localService/note.service.local.js'
 
 export function PrepareNote({ addNoteToList, typeNote, note = null }) {
+  console.log('note :', note)
   const contentInfo = note ? note.info : noteService.getEmptyInfo(typeNote)
   const [info, setInfo, handelChange] = useForm(contentInfo)
 
@@ -32,7 +33,6 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
     addNoteToList(newNote)
   }
 
-  if (!info) return <h2>Loading...</h2>
   return (
     <section className="prepare-note " style={style}>
       <div className="header-prepare-note flex space-between align-center">
@@ -40,7 +40,6 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
           type="text"
           placeholder="title"
           name="title"
-          value={info.title}
           onChange={handelChange}
         />
         <div className="mark">
@@ -49,11 +48,7 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
       </div>
 
       <div className="main-prepare-note">
-        <DynamicCmp
-          cmpType={typeNote}
-          value={info.txt}
-          changeContent={changeContent}
-        />
+        <DynamicCmp cmpType={typeNote} changeContent={changeContent} />
       </div>
 
       <div className="note-footer flex space-between align-center">
@@ -67,7 +62,7 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
 function DynamicCmp(props) {
   switch (props.cmpType) {
     case 'txt':
-      return <TxtNote changeContent={props.changeContent} value={props.value} />
+      return <TxtNote changeContent={props.changeContent} />
 
     case 'list':
       return <ListNote changeContent={props.changeContent} />
