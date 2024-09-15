@@ -12,15 +12,7 @@ export function ListNote({ changeContent = null }) {
     target.value = ''
   }
 
-  function handelChange({ target }) {
-    const idx = target.name
-    const currTodo = todos[idx]
-    currTodo.txt = target.value
-
-    const newTodos = [...todos]
-    newTodos.splice(idx, 1, currTodo)
-    setTodos(newTodos)
-  }
+  function handelChange({ target }) {}
 
   console.log('todos:', todos)
   return (
