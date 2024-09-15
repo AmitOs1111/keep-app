@@ -1,0 +1,40 @@
+.trash-note {
+  margin-block: 40px;
+  column-count: 4;
+  gap: 20px;
+  margin-inline-start: 50px;
+  transition: opacity 0.4s ease-out;
+  .tools-bar-trash {
+    opacity: 0;
+  }
+
+  .note-card:hover {
+    .tools-bar-trash {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .note-list {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .note-list {
+      column-count: 3;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .note-list {
+      column-count: 4;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .note-list {
+      column-count: 5;
+    }
+  }
+}

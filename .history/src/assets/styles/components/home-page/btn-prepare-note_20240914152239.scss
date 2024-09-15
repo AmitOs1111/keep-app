@@ -1,0 +1,20 @@
+.btn-prepare-note {
+  padding: 10px 20px;
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  ul {
+    li {
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+}
