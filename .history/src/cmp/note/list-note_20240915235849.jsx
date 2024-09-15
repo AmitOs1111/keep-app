@@ -1,22 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { useForm } from '../../customHooks/useForm'
-
-import { utilService } from '../../services/util.service'
 
 export function ListNote({ changeContent = null }) {
   // const [content, setContent, handelChange] = useForm({ todos:[] })
-  const [todos, setTodos] = useState([])
-
-  //------Debounce-----------
-  onSetContent = useRef(utilService.debounce(onSetContent))
-
-  useEffect(() => {
-    onSetContent.current(todos)
-  }, [todos])
-
-  function onSetContent(content) {
-    changeContent({ todos: content })
-  }
+  const [todos, setTodos] = useState([{ txt: 'hello', isChecked: false }])
 
   function addTodoToList({ target }) {
     if (target.value) {
@@ -36,16 +23,18 @@ export function ListNote({ changeContent = null }) {
   }
 
   function deleteTodo(idx) {
+    console.log('deleteTodo:', idx)
     const newTodos = [...todos]
     newTodos.splice(idx, 1)
     setTodos(newTodos)
   }
 
+  console.log('todos:', todos)
   return (
     <section className="list-note ">
       {todos.map((todo, idx) => (
         <article key={idx} className="flex space-between align-center">
-          <button onClick={() => deleteTodo(idx)}>x</button>
+          <button onClick={deleteTodo(idx)}>x</button>
           <input
             type="text"
             value={todo.txt}
@@ -55,10 +44,7 @@ export function ListNote({ changeContent = null }) {
           />
           {todo.isChecked && <i className="fa-regular fa-square-check"></i>}
           {!todo.isChecked && (
-            <i
-              onClick={() => deleteTodo(idx)}
-              className="fa-regular fa-square"
-            ></i>
+            <i onClick={deleteTodo(idx)} className="fa-regular fa-square"></i>
           )}
         </article>
       ))}

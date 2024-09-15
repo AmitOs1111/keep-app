@@ -34,7 +34,6 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
   }
 
   if (!info) return <h2>Loading...</h2>
-  console.log('info:', info)
   return (
     <section className="prepare-note " style={style}>
       <div className="header-prepare-note flex space-between align-center">

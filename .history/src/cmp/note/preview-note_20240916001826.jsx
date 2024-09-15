@@ -15,17 +15,12 @@ export function PreviewNote({ note }) {
   }
 
   function getTodoList(todos) {
-    return (
-      <section>
-        {todos.map((todo, idx) => (
-          <article key={idx} className="flex space-between align-center">
-            <h3>{todo.txt}</h3>
-            {todo.isChecked && <i className="fa-regular fa-square-check"></i>}
-            {!todo.isChecked && <i className="fa-regular fa-square"></i>}
-          </article>
-        ))}
-      </section>
-    )
+    return todos.map((todo, idx) => (
+      <article key={idx} className="flex space-between align-center">
+        {todo.isChecked && <i className="fa-regular fa-square-check"></i>}
+        {!todo.isChecked && <i className="fa-regular fa-square"></i>}
+      </article>
+    ))
   }
 
   function onEditContentNote() {
