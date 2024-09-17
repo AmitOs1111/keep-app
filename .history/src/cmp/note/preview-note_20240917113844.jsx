@@ -17,7 +17,6 @@ export function PreviewNote({ note = {}, changeHasLoaded }) {
         cmpType={note.info.type}
         editContentNote={editContentNote}
         note={note}
-        changeHasLoaded={changeHasLoaded}
       />
     </section>
   )
@@ -38,7 +37,7 @@ function DynamicCmp(props) {
         <PreviewTodoNote
           editContentNote={props.editContentNote}
           note={props.note}
-          changeHasLoaded={props.changeHasLoaded}
+          changeHasLoaded={changeHasLoaded}
         />
       )
 

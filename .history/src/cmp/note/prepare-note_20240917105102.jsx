@@ -72,7 +72,7 @@ function DynamicCmp(props) {
       return <TxtNote changeContent={props.changeContent} value={props.value} />
 
     case 'list':
-      return <TodoNote changeContent={props.changeContent} />
+      return <ListNote changeContent={props.changeContent} />
 
     case 'img':
       return <ImgNote changeContent={props.changeContent} />

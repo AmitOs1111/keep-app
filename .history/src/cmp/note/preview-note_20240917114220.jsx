@@ -17,7 +17,6 @@ export function PreviewNote({ note = {}, changeHasLoaded }) {
         cmpType={note.info.type}
         editContentNote={editContentNote}
         note={note}
-        changeHasLoaded={changeHasLoaded}
       />
     </section>
   )
