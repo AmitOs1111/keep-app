@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from '../../customHooks/useForm'
 import { useNavigate } from 'react-router-dom'
-import { utilService } from '../../services/util.service'
 
 export function SearchHeader() {
   const [page, setPage] = useState('home')
@@ -25,20 +24,7 @@ export function SearchHeader() {
       navigate(`/search/text/${content.txt}`)
       console.log('page search-list:')
     }
-
-    if (page === 'search-list' && content.txt) {
-      changeSearch.current(content.txt)
-      // navigate(`/search/text/${content.txt}`)
-      console.log('page search-list:')
-    }
   }, [content])
-
-  //------Debounce-----------
-  changeSearch = useRef(utilService.debounce(changeSearch))
-
-  function changeSearch(txt) {
-    navigate(`/search/text/${txt}`)
-  }
 
   return (
     <section className="search-header flex align-center">

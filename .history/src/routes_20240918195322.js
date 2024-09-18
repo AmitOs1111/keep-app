@@ -8,18 +8,12 @@ import { TrashNote } from './pages/trash-note.jsx'
 import { ArchiveNote } from './pages/archive-note.jsx'
 import { ListByLabel } from './pages/list-by-label.jsx'
 import { MainSearch } from './pages/main-search.jsx'
-import { SearchList } from './pages/search-list.jsx'
 
 const routes = [
   {
     path: 'search',
     component: <MainSearch />,
     label: 'Search ',
-  },
-  {
-    path: 'search/text/:text',
-    component: <SearchList />,
-    label: 'Search-list',
   },
   {
     path: '',

@@ -17,7 +17,7 @@ const routes = [
     label: 'Search ',
   },
   {
-    path: 'search/text/:text',
+    path: 'search/:text',
     component: <SearchList />,
     label: 'Search-list',
   },
