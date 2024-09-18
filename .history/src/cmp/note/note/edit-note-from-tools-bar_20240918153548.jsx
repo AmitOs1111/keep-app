@@ -25,8 +25,6 @@ export function EditNoteFromToolsBar({ note, changeHasLoaded }) {
 
   function addLabel(label) {
     const noteToUpdate = { ...note }
-    if (noteToUpdate.labels.includes(label)) return
-
     noteToUpdate.labels.push(label)
     updateNote(noteToUpdate)
   }

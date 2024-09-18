@@ -1,14 +1,11 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
+import { loadNotes } from '../store/note.action'
+import { useParams } from 'react-router-dom'
 
-import { PreviewNote } from '../note/preview-note.jsx'
-import { EditNoteFromToolsBar } from './note/edit-note-from-tools-bar.jsx'
-import { PreviewLabelNote } from './note/preview-label-note.jsx'
-
-import { loadNotes } from '../../store/note.action.js'
-
-export function NoteList() {
-  const filterBy = { isTrash: false, isArchive: false }
+export function ListByLabel() {
+  const params = useParams()
+  const filterBy = { labels: params.label }
   const { notes } = useSelector((state) => state.noteModule)
   const hasLoaded = useRef(false)
 
@@ -23,16 +20,13 @@ export function NoteList() {
     hasLoaded.current = val
   }
 
-  if (!notes || notes.length === 0) return <section>Loading...</section>
-  // console.log('notes:', notes)
+  if (!notes) return <section>Empty</section>
+
   return (
-    <section className="note-list">
+    <section className="list-by-label">
       {notes.map((note) => (
         <article key={note._id} className="note-card" style={note.style}>
           <PreviewNote note={note} changeHasLoaded={changeHasLoaded} />
-          {note.labels.length > 0 && (
-            <PreviewLabelNote note={note} changeHasLoaded={changeHasLoaded} />
-          )}
           <EditNoteFromToolsBar note={note} changeHasLoaded={changeHasLoaded} />
         </article>
       ))}

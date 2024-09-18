@@ -143,8 +143,9 @@ export function SideBar() {
     if (item === 'notes') navigate('/home')
   }
 
-  function clickedLabel(clickedLabel) {
-    const label = clickedLabel.toLowerCase()
+  function clickedLabel(label) {
+    label = label.toLowerCase()
+
     navigate(`/label/${label}`)
   }
 

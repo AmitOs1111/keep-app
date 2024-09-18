@@ -31,6 +31,17 @@ export function SideBar() {
             </svg>`,
     },
     {
+      title: 'Labels',
+      svg: ` <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z"></path>
+            </svg>`,
+    },
+    {
       title: 'Archive',
       svg: ` <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,19 +64,7 @@ export function SideBar() {
               <path d="M9 8h2v9H9zm4 0h2v9h-2z"></path>
             </svg>`,
     },
-    {
-      title: 'Labels',
-      svg: ` <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z"></path>
-            </svg>`,
-    },
   ]
-
   const labels = [
     {
       title: 'Work',
@@ -136,18 +135,15 @@ export function SideBar() {
 
   function clickedMenuSideBar(item) {
     item = item.toLowerCase()
+    console.log('item:', item)
     if (item === 'archive' || item === 'trash') navigate(`/${item}`)
-
-    if (item === 'labels') toggleOpenLabel()
 
     if (item === 'notes') navigate('/home')
   }
 
-  function clickedLabel(clickedLabel) {
-    const label = clickedLabel.toLowerCase()
-    navigate(`/label/${label}`)
+  function clickedLabel(label) {
+    console.log('label:', label)
   }
-
   return (
     <section className="side-bar">
       <ul className="clean-list">
@@ -166,26 +162,26 @@ export function SideBar() {
               <HtmlContent htmlString={item.svg} />
             </div>
             <h3>{item.title}</h3>
+            {isOpenLabel && (
+              <ul className="clean-list">
+                {labels.map((item) => (
+                  <li
+                    key={item.title}
+                    className="flex align-center label"
+                    onClick={() => {
+                      clickedLabel(item.title)
+                    }}
+                  >
+                    <div className="label-bar-icon ">
+                      <HtmlContent htmlString={item.svg} />
+                    </div>
+                    <h3>{item.title}</h3>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
-        {isOpenLabel && (
-          <ul className="clean-list">
-            {labels.map((item) => (
-              <li
-                key={item.title}
-                className="flex align-center label"
-                onClick={() => {
-                  clickedLabel(item.title)
-                }}
-              >
-                <div className="label-bar-icon ">
-                  <HtmlContent htmlString={item.svg} />
-                </div>
-                <h3>{item.title}</h3>
-              </li>
-            ))}
-          </ul>
-        )}
       </ul>
     </section>
   )

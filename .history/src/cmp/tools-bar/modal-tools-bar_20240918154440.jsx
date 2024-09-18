@@ -2,7 +2,6 @@ import { StyleModal } from '../../cmp/tools-bar/style-modal.jsx'
 import { SharingModal } from '../../cmp/tools-bar/sharing-modal.jsx'
 import { ReminderModal } from '../../cmp/tools-bar/reminder-modal.jsx'
 import { MoreModal } from '../../cmp/tools-bar/more-modal.jsx'
-import { LabelModal } from '../../cmp/tools-bar/label-modal.jsx'
 
 export function ModalToolsBar({
   typeModal,
@@ -45,8 +44,5 @@ function DynamicCmp(props) {
           onClickedTool={props.onClickedTool}
         />
       )
-
-    case 'label':
-      return <LabelModal addLabel={props.addLabel} />
   }
 }

@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 
 import { PreviewNote } from '../note/preview-note.jsx'
 import { EditNoteFromToolsBar } from './note/edit-note-from-tools-bar.jsx'
-import { PreviewLabelNote } from './note/preview-label-note.jsx'
 
 import { loadNotes } from '../../store/note.action.js'
 
@@ -30,9 +29,6 @@ export function NoteList() {
       {notes.map((note) => (
         <article key={note._id} className="note-card" style={note.style}>
           <PreviewNote note={note} changeHasLoaded={changeHasLoaded} />
-          {note.labels.length > 0 && (
-            <PreviewLabelNote note={note} changeHasLoaded={changeHasLoaded} />
-          )}
           <EditNoteFromToolsBar note={note} changeHasLoaded={changeHasLoaded} />
         </article>
       ))}

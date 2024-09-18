@@ -45,7 +45,7 @@ function query(entityType, filterBy, delay = 400) {
       const regExp = new RegExp(label, 'i')
 
       entities = entities.filter((note) => {
-        return note.labels.find((item) => regExp.test(item))
+        return note.label.find((item) => regExp.test(item))
       })
     }
 

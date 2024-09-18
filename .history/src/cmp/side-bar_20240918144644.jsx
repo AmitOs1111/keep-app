@@ -65,7 +65,6 @@ export function SideBar() {
             </svg>`,
     },
   ]
-
   const labels = [
     {
       title: 'Work',
@@ -136,6 +135,7 @@ export function SideBar() {
 
   function clickedMenuSideBar(item) {
     item = item.toLowerCase()
+    console.log('item:', item)
     if (item === 'archive' || item === 'trash') navigate(`/${item}`)
 
     if (item === 'labels') toggleOpenLabel()
@@ -143,9 +143,8 @@ export function SideBar() {
     if (item === 'notes') navigate('/home')
   }
 
-  function clickedLabel(clickedLabel) {
-    const label = clickedLabel.toLowerCase()
-    navigate(`/label/${label}`)
+  function clickedLabel(label) {
+    console.log('label:', label)
   }
 
   return (

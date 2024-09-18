@@ -2,7 +2,6 @@ import { StyleModal } from '../../cmp/tools-bar/style-modal.jsx'
 import { SharingModal } from '../../cmp/tools-bar/sharing-modal.jsx'
 import { ReminderModal } from '../../cmp/tools-bar/reminder-modal.jsx'
 import { MoreModal } from '../../cmp/tools-bar/more-modal.jsx'
-import { LabelModal } from '../../cmp/tools-bar/label-modal.jsx'
 
 export function ModalToolsBar({
   typeModal,
@@ -10,7 +9,6 @@ export function ModalToolsBar({
   moveToTrash,
   copyNote,
   addLabel,
-  onClickedTool,
 }) {
   return (
     <section className="modal-tools-bar">
@@ -20,7 +18,6 @@ export function ModalToolsBar({
         moveToTrash={moveToTrash}
         copyNote={copyNote}
         addLabel={addLabel}
-        onClickedTool={onClickedTool}
       />
     </section>
   )
@@ -42,11 +39,8 @@ function DynamicCmp(props) {
         <MoreModal
           moveToTrash={props.moveToTrash}
           copyNote={props.copyNote}
-          onClickedTool={props.onClickedTool}
+          addLabel={props.addLabel}
         />
       )
-
-    case 'label':
-      return <LabelModal addLabel={props.addLabel} />
   }
 }

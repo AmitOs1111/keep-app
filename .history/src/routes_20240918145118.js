@@ -6,7 +6,6 @@ import { SignUpApp } from './pages/signup.jsx'
 import { EditContentNote } from './pages/edit-content-note.jsx'
 import { TrashNote } from './pages/trash-note.jsx'
 import { ArchiveNote } from './pages/archive-note.jsx'
-import { ListByLabel } from './pages/list-by-label.jsx'
 
 const routes = [
   {
@@ -36,7 +35,7 @@ const routes = [
   },
   {
     path: 'label/:label',
-    component: <ListByLabel />,
+    component: <ListByLabels />,
     label: 'label',
   },
 

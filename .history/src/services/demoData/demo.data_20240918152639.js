@@ -18,7 +18,7 @@ const demoNotes = [
       src: '',
       videoId: {},
     },
-    labels: [],
+    labels: ['work'],
     isTrash: false,
     isArchive: false,
   },

@@ -41,14 +41,6 @@ function query(entityType, filterBy, delay = 400) {
       entities = entities.filter((note) => note.isArchive)
     }
 
-    if (label) {
-      const regExp = new RegExp(label, 'i')
-
-      entities = entities.filter((note) => {
-        return note.labels.find((item) => regExp.test(item))
-      })
-    }
-
     if (type) {
       const regExp = new RegExp(type, 'i')
 
@@ -122,7 +114,6 @@ function _createNote({ info, style }) {
     createdAt: new Date(),
     style,
     info,
-    labels: [],
     isTrash: false,
     isArchive: false,
   }

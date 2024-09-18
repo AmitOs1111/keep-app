@@ -16,8 +16,7 @@ export function ToolsBar({
       type === 'style' ||
       type === 'sharing' ||
       type === 'reminder' ||
-      type === 'more' ||
-      type === 'label'
+      type === 'more'
     ) {
       if (typeModal === type) setTypeModal(null)
       else setTypeModal(type)
@@ -63,7 +62,6 @@ export function ToolsBar({
           changeColor={changeColor}
           copyNote={copyNote}
           addLabel={addLabel}
-          onClickedTool={onClickedTool}
         />
       )}
     </section>

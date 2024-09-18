@@ -49,13 +49,13 @@ function query(entityType, filterBy, delay = 400) {
       })
     }
 
-    if (type) {
-      const regExp = new RegExp(type, 'i')
+    // if (type) {
+    //   const regExp = new RegExp(type, 'i')
 
-      entities = entities.filter((note) => {
-        return note.type.find((item) => regExp.test(item))
-      })
-    }
+    //   entities = entities.filter((note) => {
+    //     return note.type.find((item) => regExp.test(item))
+    //   })
+    // }
   }
 
   return new Promise((resolve, reject) => {
