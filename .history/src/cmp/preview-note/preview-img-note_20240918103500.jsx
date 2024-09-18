@@ -5,9 +5,10 @@ export function PreviewImgNote({ editContentNote, note }) {
     <section className="preview-img-note">
       <img
         // src={note.src}
+
         src={require('../../assets/img/demo1.jpg')}
         alt={'img'}
-        style={{ width: '100%' }}
+        style={{ width: '100%', position: 'absolute' }}
       />
     </section>
   )

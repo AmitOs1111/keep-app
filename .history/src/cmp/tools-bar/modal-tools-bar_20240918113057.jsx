@@ -33,8 +33,6 @@ function DynamicCmp(props) {
       return <ReminderModal />
 
     case 'more':
-      return (
-        <MoreModal moveToTrash={props.moveToTrash} copyNote={props.copyNote} />
-      )
+      return <MoreModal moveToTrash={props.moveToTrash} copyNote={copyNote} />
   }
 }

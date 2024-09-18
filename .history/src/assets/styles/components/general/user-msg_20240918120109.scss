@@ -1,23 +1,15 @@
 .user-msg {
   width: 200px;
   height: 60px;
-  // position: absolute;
+  position: absolute;
   // top: 0px;
   // right: 0px;
-  margin: auto;
-  margin-block-end: 40px;
   border: $main-border;
   box-shadow: $main-box-shadow;
-  background-color: #f4f4f4;
+  background-color: #fa8383;
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: space-between;
   z-index: 10;
   border-radius: 0.4em;
-  padding: 10px;
-
-  p {
-    margin: 0;
-  }
 }

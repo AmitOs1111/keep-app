@@ -23,7 +23,22 @@ export function PrepareImgNote({ changeContent }) {
     accept: 'image/*', // Only accept images
   })
 
+  function loadImageFromInput(ev, onImageReady) {
+    //   document.querySelector('.share-container').innerHTML = ''
+
+    let reader = new FileReader()
+
+    reader.onload = (event) => {
+      var img = new Image()
+      img.src = event.target.result
+      console.log('img:', img)
+      // img.onload = onImageReady.bind(null, img)
+    }
+    reader.readAsDataURL(ev.target.files[0])
+  }
+
   console.log('uploadedFiles:', uploadedFiles)
+
   return (
     <section className="prepare-img-note ">
       <div
@@ -56,6 +71,11 @@ export function PrepareImgNote({ changeContent }) {
             </div>
           ))}
         </div>
+      </div>
+      <input type="file" onChange={loadImageFromInput} />
+
+      <div className="container-img">
+        <img src={uploadImg.src} alt="" />
       </div>
     </section>
   )

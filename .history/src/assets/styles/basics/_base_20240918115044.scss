@@ -19,16 +19,13 @@ body {
   margin: 0;
   padding: 03;
   background-color: $clr1;
+  position: relative;
 
   // @include for-normal-layout {
   //   &.sidebar-open {
   //     overflow: hidden;
   //   }
   // }
-}
-
-.App {
-  position: relative;
 }
 
 h1,

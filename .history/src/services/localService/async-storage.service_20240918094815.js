@@ -18,33 +18,31 @@ function query(entityType, filterBy, delay = 400) {
     _save(entityType, entities)
   }
 
-  if (filterBy) {
-    const { type, isTrash, isArchive } = filterBy
-    if (!isTrash) {
-      console.log('is not a Trash')
-      entities = entities.filter((note) => !note.isTrash)
-    }
-    if (isTrash) {
-      console.log('is a Trash')
-      entities = entities.filter((note) => note.isTrash)
-    }
+  const { type, isTrash, isArchive } = filterBy
+  if (!isTrash) {
+    console.log('is not a Trash')
+    entities = entities.filter((note) => !note.isTrash)
+  }
+  if (isTrash) {
+    console.log('is a Trash')
+    entities = entities.filter((note) => note.isTrash)
+  }
 
-    if (!isArchive) {
-      console.log('is not a Archive')
-      entities = entities.filter((note) => !note.isArchive)
-    }
-    if (isArchive) {
-      console.log('is a Archive')
-      entities = entities.filter((note) => note.isArchive)
-    }
+  if (!isArchive) {
+    console.log('is not a Archive')
+    entities = entities.filter((note) => !note.isArchive)
+  }
+  if (isArchive) {
+    console.log('is a Archive')
+    entities = entities.filter((note) => note.isArchive)
+  }
 
-    if (type) {
-      const regExp = new RegExp(type, 'i')
+  if (type) {
+    const regExp = new RegExp(type, 'i')
 
-      entities = entities.filter((note) => {
-        return note.type.find((item) => regExp.test(item))
-      })
-    }
+    entities = entities.filter((note) => {
+      return note.type.find((item) => regExp.test(item))
+    })
   }
 
   return new Promise((resolve, reject) => {
@@ -71,22 +69,35 @@ function post(entityType, newEntity) {
 }
 
 function put(entityType, updatedEntity) {
-  return query(entityType).then((entities) => {
-    const idx = entities.findIndex((entity) => entity._id === updatedEntity._id)
-    entities.splice(idx, 1, updatedEntity)
-    _save(entityType, entities)
-    return updatedEntity
-  })
+  let entities = JSON.parse(localStorage.getItem(entityType))
+  const idx = entities.findIndex((entity) => entity._id === updatedEntity._id)
+  entities.splice(idx, 1, updatedEntity)
+  _save(entityType, entities)
+  return Promise.resolve(updatedEntity)
+
+  // return query(entityType).then((entities) => {
+  //   const idx = entities.findIndex((entity) => entity._id === updatedEntity._id)
+  //   entities.splice(idx, 1, updatedEntity)
+  //   _save(entityType, entities)
+  //   return updatedEntity
+  // })
 }
 
 function remove(entityType, entityId) {
-  return query(entityType).then((entities) => {
-    const idx = entities.findIndex((entity) => entity._id === entityId)
-    const noteRemove = entities[idx]
-    entities.splice(idx, 1)
-    _save(entityType, entities)
-    return Promise.resolve(noteRemove._id)
-  })
+  let entities = JSON.parse(localStorage.getItem(entityType))
+  const idx = entities.findIndex((entity) => entity._id === entityId)
+  const noteRemove = entities[idx]
+  entities.splice(idx, 1)
+  _save(entityType, entities)
+  return Promise.resolve(noteRemove._id)
+
+  // return query(entityType).then((entities) => {
+  //   const idx = entities.findIndex((entity) => entity._id === entityId)
+  //   const noteRemove = entities[idx]
+  //   entities.splice(idx, 1)
+  //   _save(entityType, entities)
+  //   return Promise.resolve(noteRemove._id)
+  // })
 }
 
 function _save(entityType, entities) {

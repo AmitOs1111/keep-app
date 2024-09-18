@@ -24,6 +24,7 @@ export function TrashNote() {
   }
   function clickedBtnToolsBar(type, note) {
     hasLoaded.current = false
+    console.log('type:', type)
     if (type === 'remove') removeNote(note._id)
     if (type === 'recycle') recycleNote(note)
   }

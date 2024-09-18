@@ -34,7 +34,6 @@ export function EditNoteFromToolsBar({ note, changeHasLoaded }) {
         moveToTrash={moveToTrash}
         changeColor={changeColor}
         moveToArchive={moveToArchive}
-        copyNote={copyNote}
       />
     </section>
   )

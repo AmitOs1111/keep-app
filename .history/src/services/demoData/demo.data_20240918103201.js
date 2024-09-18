@@ -37,7 +37,22 @@ const demoNotes = [
     isTrash: false,
     isArchive: false,
   },
-
+  {
+    _id: utilService.makeId(),
+    isPinned: false,
+    createdAt: new Date(),
+    style: { backgroundColor: '#fff' },
+    info: {
+      title: utilService.makeLorem(5),
+      type: 'img',
+      txt: '',
+      todos: [],
+      src: 'demo2.jpg',
+      videoId: {},
+    },
+    isTrash: false,
+    isArchive: false,
+  },
   {
     _id: utilService.makeId(),
     isPinned: false,

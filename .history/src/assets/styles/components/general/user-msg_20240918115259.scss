@@ -1,0 +1,13 @@
+.user-msg {
+  // position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 40px;
+  border: $main-border;
+  box-shadow: $main-box-shadow;
+  background-color: #fa8383;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
