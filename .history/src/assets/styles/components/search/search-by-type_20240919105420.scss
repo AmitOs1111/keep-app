@@ -1,0 +1,35 @@
+.search-by-type {
+  border: $main-border;
+  box-shadow: $main-box-shadow;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-block: 20px;
+  padding-bottom: 5px;
+  h2 {
+    margin: 0;
+    text-align: start;
+  }
+  ul {
+    > *:not(:last-child) {
+      margin-inline-end: 10px;
+    }
+    li {
+      background-color: #2073e8;
+      width: 160px;
+      height: 160px;
+      justify-content: end;
+      padding: 10px;
+
+      h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+      i {
+        margin-bottom: 40px;
+        font-size: 24px;
+      }
+    }
+  }
+}

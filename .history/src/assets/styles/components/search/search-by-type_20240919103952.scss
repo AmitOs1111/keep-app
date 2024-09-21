@@ -1,0 +1,25 @@
+.search-by-type {
+  padding: 10px;
+  border: $main-border;
+  box-shadow: $main-box-shadow;
+  margin-block: 20px;
+  color: #fff;
+  height: 20vh;
+  h2 {
+    margin: 0;
+    text-align: start;
+  }
+  li {
+    background-color: #2073e8;
+    width: 25%;
+    height: 50%;
+    margin: 10px;
+    justify-content: end;
+    h3 {
+      margin: 0;
+    }
+    i {
+      margin-bottom: 40px;
+    }
+  }
+}
