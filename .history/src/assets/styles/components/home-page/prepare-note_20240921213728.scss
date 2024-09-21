@@ -1,0 +1,22 @@
+.prepare-note {
+  padding: 10px;
+  background-color: aqua;
+  padding: 0;
+  .header-prepare-note {
+    input {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+
+  .main-prepare-note {
+  }
+
+  .note-footer {
+  }
+
+  textarea {
+    font-size: 14px;
+    width: 100%;
+  }
+}

@@ -8,13 +8,11 @@
       align-items: center;
       justify-content: center;
       margin-inline-start: 25px;
-      width: 30px;
-      height: 30px;
       cursor: pointer;
       &:hover {
-        background-color: $clr3;
+        background-color: $clr4;
         border-radius: 50%;
-        // padding: 10px;
+        width: 30px;
       }
 
       i {

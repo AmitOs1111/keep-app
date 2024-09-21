@@ -9,10 +9,7 @@
     input {
       font-size: 18px;
       width: 100%;
-    }
-    i {
-      color: $clr5;
-      font-size: 18px;
+      // padding: 10px;
     }
   }
 
@@ -27,11 +24,6 @@
   .note-footer {
     button {
       font-size: 18px;
-      padding: 7px;
-      border-radius: 0.4em;
-      &:hover {
-        background-color: $clr3;
-      }
     }
   }
 }

@@ -4,11 +4,11 @@ export function BtnPrepareNote({ changeTypeNote }) {
   }
 
   return (
-    <section className="btn-prepare-note ">
+    <section className="btn-prepare-note flex align-center space-between">
       <div className="btn-prepare-note-content flex align-center space-between">
         <h3 onClick={() => selectedTypeNote()}>new note...</h3>
         <div className="box-type-note flex align-center">
-          <ul className="flex align-center clean-list">
+          <ul className="flex  clean-list">
             <li onClick={() => selectedTypeNote('img')}>
               <i className="fa-regular fa-image"></i>
             </li>

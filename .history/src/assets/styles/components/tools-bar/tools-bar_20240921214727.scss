@@ -1,20 +1,19 @@
 .tools-bar {
   position: relative;
   ul {
-    margin-block: 5px;
+    margin-block: 15px;
     li {
       // padding: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-inline-start: 25px;
-      width: 30px;
-      height: 30px;
       cursor: pointer;
       &:hover {
-        background-color: $clr3;
+        background-color: $clr4;
         border-radius: 50%;
-        // padding: 10px;
+        width: 30px;
+        height: 30px;
       }
 
       i {

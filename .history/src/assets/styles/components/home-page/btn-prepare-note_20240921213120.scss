@@ -5,17 +5,17 @@
   h3 {
     margin: 0;
     font-size: 18px;
-    color: $clr5;
   }
 
   ul {
     li {
       margin-inline-start: 25px;
       display: flex;
-      align-items: center;
+      // align-items: center;
+      // justify-content: center;
       i {
+        // padding: 6px;
         font-size: 20px;
-        color: $clr5;
       }
     }
   }
