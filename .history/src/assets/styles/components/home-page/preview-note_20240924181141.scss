@@ -66,28 +66,4 @@ article.note-card {
       }
     }
   }
-
-  @include for-mobile-layout {
-    max-width: 400px;
-  }
-
-  @include for-tablet-layout {
-    max-width: 250px;
-  }
-
-  @include for-narrow-layout {
-    max-width: 200px;
-  }
-
-  @include for-normal-layout {
-    max-width: 220px;
-  }
-
-  @include for-wide-layout {
-    max-width: 240px;
-  }
-
-  @include for-extra-wide-layout {
-    max-width: 240px;
-  }
 }

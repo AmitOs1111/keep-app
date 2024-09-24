@@ -1,6 +1,6 @@
 article.note-card {
   position: relative;
-  max-width: 240px;
+  max-width: 300px;
   break-inside: avoid-column;
   margin-block-end: 20px;
   border: 1px solid $clr4;
@@ -65,29 +65,5 @@ article.note-card {
         margin: 0;
       }
     }
-  }
-
-  @include for-mobile-layout {
-    max-width: 400px;
-  }
-
-  @include for-tablet-layout {
-    max-width: 250px;
-  }
-
-  @include for-narrow-layout {
-    max-width: 200px;
-  }
-
-  @include for-normal-layout {
-    max-width: 220px;
-  }
-
-  @include for-wide-layout {
-    max-width: 240px;
-  }
-
-  @include for-extra-wide-layout {
-    max-width: 240px;
   }
 }

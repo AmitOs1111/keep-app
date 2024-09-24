@@ -73,21 +73,34 @@ article.note-card {
 
   @include for-tablet-layout {
     max-width: 250px;
+    // gap: 5px;
   }
 
   @include for-narrow-layout {
+    // article.note-card {
     max-width: 200px;
+    // background-color: rgb(243, 170, 74);
+    // }
   }
 
   @include for-normal-layout {
+    // article.note-card {
+    // background-color: antiquewhite;
     max-width: 220px;
+    // }
   }
 
   @include for-wide-layout {
-    max-width: 240px;
+    article.note-card {
+      background-color: rgb(144, 141, 234);
+      max-width: 240px;
+    }
   }
 
   @include for-extra-wide-layout {
-    max-width: 240px;
+    article.note-card {
+      background-color: rgb(216, 141, 234);
+      max-width: 240px;
+    }
   }
 }

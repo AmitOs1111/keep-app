@@ -1,0 +1,29 @@
+.note-list {
+  // column-count: 6;
+  gap: 20px;
+  margin-inline-start: 50px;
+
+  @media (max-width: 640px) {
+    .note-list {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .note-list {
+      column-count: 3;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .note-list {
+      column-count: 4;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .note-list {
+      column-count: 5;
+    }
+  }
+}

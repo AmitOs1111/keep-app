@@ -68,26 +68,44 @@ article.note-card {
   }
 
   @include for-mobile-layout {
-    max-width: 400px;
+    // article.note-card {
+    max-width: 240px;
+    background-color: rgb(139, 243, 74);
+    // }
   }
 
   @include for-tablet-layout {
-    max-width: 250px;
+    article.note-card {
+      max-width: 240px;
+      background-color: rgb(74, 243, 243);
+    }
   }
 
   @include for-narrow-layout {
-    max-width: 200px;
+    article.note-card {
+      max-width: 240px;
+      background-color: rgb(243, 170, 74);
+    }
   }
 
   @include for-normal-layout {
-    max-width: 220px;
+    article.note-card {
+      background-color: antiquewhite;
+      max-width: 240px;
+    }
   }
 
   @include for-wide-layout {
-    max-width: 240px;
+    article.note-card {
+      background-color: rgb(144, 141, 234);
+      max-width: 240px;
+    }
   }
 
   @include for-extra-wide-layout {
-    max-width: 240px;
+    article.note-card {
+      background-color: rgb(216, 141, 234);
+      max-width: 240px;
+    }
   }
 }

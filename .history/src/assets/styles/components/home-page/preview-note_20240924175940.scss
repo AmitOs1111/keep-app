@@ -1,0 +1,51 @@
+article.note-card {
+  position: relative;
+  max-width: 240px;
+  break-inside: avoid-column;
+  margin-block-end: 20px;
+  border: 1px solid $clr4;
+  border-radius: 0.8em;
+  gap: 20px;
+  padding: 20px 20px 5px;
+  font-size: 12px;
+  text-align: start;
+
+  header {
+    background-color: antiquewhite;
+    h3 {
+      margin: 0;
+    }
+    i {
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
+  }
+
+  .tools-bar {
+    transition: opacity 0.4s ease-out;
+    opacity: 0;
+  }
+  &:hover {
+    box-shadow: 0 0 4px 0px;
+
+    .tools-bar {
+      opacity: 1;
+    }
+  }
+
+  .preview-label-note {
+    li {
+      background-color: rgb(39, 87, 39);
+      border-radius: 0.5em;
+      padding: 5px;
+      color: #fff;
+      button {
+        color: #fff;
+      }
+      h4 {
+        margin: 0;
+      }
+    }
+  }
+}

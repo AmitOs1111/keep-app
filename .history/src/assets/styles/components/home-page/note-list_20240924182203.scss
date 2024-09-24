@@ -1,0 +1,38 @@
+.note-list {
+  column-count: 6;
+  gap: 20px;
+  margin-inline-start: 50px;
+
+  @include for-mobile-layout {
+    .note-list {
+      column-count: 2;
+    }
+  }
+
+  @include for-tablet-layout {
+    .note-list {
+      column-count: 3;
+    }
+  }
+
+  @include for-narrow-layout {
+    .note-list {
+      column-count: 4;
+      background-color: rgb(243, 170, 74);
+    }
+  }
+
+  @include for-normal-layout {
+    .note-list {
+      background-color: antiquewhite;
+      column-count: 5;
+    }
+  }
+
+  @include for-wide-layout {
+    .note-list {
+      background-color: rgb(144, 141, 234);
+      column-count: 5;
+    }
+  }
+}
