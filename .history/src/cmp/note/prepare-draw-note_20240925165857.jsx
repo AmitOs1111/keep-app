@@ -23,7 +23,9 @@ export function PrepareDrawNote({ changeContent }) {
       type = 'color'
       val = target.value
     }
-
+    console.log('target:', target)
+    console.log('type:', type)
+    console.log('val:', val)
     setDesign((prev) => ({
       ...prev,
       [type]: val,

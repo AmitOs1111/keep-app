@@ -23,7 +23,9 @@ export function PrepareDrawNote({ changeContent }) {
       type = 'color'
       val = target.value
     }
-
+    console.log('target:', target)
+    console.log('type:', type)
+    console.log('val:', val)
     setDesign((prev) => ({
       ...prev,
       [type]: val,
@@ -83,6 +85,7 @@ export function PrepareDrawNote({ changeContent }) {
     changeContent({ src: dataURL })
   }
 
+  console.log('design:', design)
   return (
     <section className="prepare-draw-note">
       <div className="canvas-tools flex">
@@ -95,16 +98,16 @@ export function PrepareDrawNote({ changeContent }) {
             onChange={changeDesign}
           />
         </button>
-        <button onClick={() => changeDesign('', 'width', 2)}>
+        <button onClick={() => changeDesign('width', 2)}>
           <i className="fa-solid fa-pen small"></i>
         </button>
-        <button onClick={() => changeDesign('', 'width', 4)}>
+        <button onClick={() => changeDesign('width', 4)}>
           <i className="fa-solid fa-pen medium"></i>
         </button>
-        <button onClick={() => changeDesign('', 'width', 6)}>
+        <button onClick={() => changeDesign('width', 6)}>
           <i className="fa-solid fa-pen large"></i>
         </button>
-        <button onClick={() => changeDesign('', 'width', 8)}>
+        <button onClick={() => changeDesign(event, 'width', 8)}>
           <i className="fa-solid fa-brush brush"></i>
         </button>
       </div>

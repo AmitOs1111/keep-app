@@ -19,11 +19,12 @@ export function PrepareDrawNote({ changeContent }) {
   }, [])
 
   function changeDesign({ target }, type, val) {
+    console.log('target:', target)
     if (target) {
-      type = 'color'
+      type = color
       val = target.value
     }
-
+    console.log('type, val:', type, val)
     setDesign((prev) => ({
       ...prev,
       [type]: val,
@@ -49,9 +50,9 @@ export function PrepareDrawNote({ changeContent }) {
     ctx.beginPath()
     ctx.moveTo(lastPos.x, lastPos.y)
     ctx.lineTo(offsetX, offsetY)
-    ctx.strokeStyle = design.color
+    ctx.strokeStyle = '#ff5733'
     // Color of the stroke
-    ctx.lineWidth = design.width
+    ctx.lineWidth = 2
     ctx.stroke()
     ctx.closePath()
     // Update the last position to the current one
@@ -87,7 +88,7 @@ export function PrepareDrawNote({ changeContent }) {
     <section className="prepare-draw-note">
       <div className="canvas-tools flex">
         <button>
-          <i className="fa-solid fa-palette"></i>
+          <i class="fa-solid fa-palette"></i>
           <input
             type="color"
             name="color"
@@ -95,17 +96,17 @@ export function PrepareDrawNote({ changeContent }) {
             onChange={changeDesign}
           />
         </button>
-        <button onClick={() => changeDesign('', 'width', 2)}>
-          <i className="fa-solid fa-pen small"></i>
+        <button onClick={() => changeDesign('width', 2)}>
+          <i class="fa-solid fa-pen small"></i>
         </button>
-        <button onClick={() => changeDesign('', 'width', 4)}>
-          <i className="fa-solid fa-pen medium"></i>
+        <button onClick={() => changeDesign('width', 4)}>
+          <i class="fa-solid fa-pen medium"></i>
         </button>
-        <button onClick={() => changeDesign('', 'width', 6)}>
-          <i className="fa-solid fa-pen large"></i>
+        <button onClick={() => changeDesign('width', 6)}>
+          <i class="fa-solid fa-pen large"></i>
         </button>
-        <button onClick={() => changeDesign('', 'width', 8)}>
-          <i className="fa-solid fa-brush brush"></i>
+        <button onClick={() => changeDesign('width', 8)}>
+          <i class="fa-solid fa-brush brush"></i>
         </button>
       </div>
       <canvas

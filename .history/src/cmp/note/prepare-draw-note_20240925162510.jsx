@@ -4,7 +4,6 @@ export function PrepareDrawNote({ changeContent }) {
   const canvasRef = useRef(null)
   const [isDrawing, setIsDrawing] = useState(false)
   const [lastPos, setLastPos] = useState({ x: 0, y: 0 })
-  const [design, setDesign] = useState({ width: 2, color: 'black' })
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -17,18 +16,6 @@ export function PrepareDrawNote({ changeContent }) {
       setIsDrawing(false)
     }
   }, [])
-
-  function changeDesign({ target }, type, val) {
-    if (target) {
-      type = 'color'
-      val = target.value
-    }
-
-    setDesign((prev) => ({
-      ...prev,
-      [type]: val,
-    }))
-  }
 
   // Handle the start of drawing
   const handleMouseDown = (e) => {
@@ -49,9 +36,9 @@ export function PrepareDrawNote({ changeContent }) {
     ctx.beginPath()
     ctx.moveTo(lastPos.x, lastPos.y)
     ctx.lineTo(offsetX, offsetY)
-    ctx.strokeStyle = design.color
+    ctx.strokeStyle = '#ff5733'
     // Color of the stroke
-    ctx.lineWidth = design.width
+    ctx.lineWidth = 2
     ctx.stroke()
     ctx.closePath()
     // Update the last position to the current one
@@ -76,6 +63,7 @@ export function PrepareDrawNote({ changeContent }) {
     const canvas = canvasRef.current
     const dataURL = canvas.toDataURL('image/png')
     // Get the image as a PNG data URL
+    d
 
     var img = new Image()
     img.src = dataURL
@@ -83,31 +71,26 @@ export function PrepareDrawNote({ changeContent }) {
     changeContent({ src: dataURL })
   }
 
+  //   function downloadCanvas() {
+  //     const canvas = canvasRef.current
+  //     const ctx = canvas.getContext('2d')
+  //     const data = ctx.toDataURL()
+  //     console.log('data:', data)
+  //     var reader = new FileReader()
+
+  //     reader.onload = (event) => {
+  //       var img = new Image()
+  //       img.src = data
+  //       console.log('img:', img)
+  //       // img.onload = () => addNewImgGallery(src)
+  //       //   img.onload = onImageReady.bind(null, img)
+  //     }
+  //     // reader.readAsDataURL(ev.target.files[0])
+  //   }
+
   return (
     <section className="prepare-draw-note">
-      <div className="canvas-tools flex">
-        <button>
-          <i className="fa-solid fa-palette"></i>
-          <input
-            type="color"
-            name="color"
-            value={design.color}
-            onChange={changeDesign}
-          />
-        </button>
-        <button onClick={() => changeDesign('', 'width', 2)}>
-          <i className="fa-solid fa-pen small"></i>
-        </button>
-        <button onClick={() => changeDesign('', 'width', 4)}>
-          <i className="fa-solid fa-pen medium"></i>
-        </button>
-        <button onClick={() => changeDesign('', 'width', 6)}>
-          <i className="fa-solid fa-pen large"></i>
-        </button>
-        <button onClick={() => changeDesign('', 'width', 8)}>
-          <i className="fa-solid fa-brush brush"></i>
-        </button>
-      </div>
+      <h3>Draw Pinnacle on Canvas</h3>
       <canvas
         ref={canvasRef}
         width={400}

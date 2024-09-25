@@ -23,7 +23,9 @@ export function PrepareDrawNote({ changeContent }) {
       type = 'color'
       val = target.value
     }
-
+    console.log('target:', target)
+    console.log('type:', type)
+    console.log('val:', val)
     setDesign((prev) => ({
       ...prev,
       [type]: val,
@@ -83,6 +85,7 @@ export function PrepareDrawNote({ changeContent }) {
     changeContent({ src: dataURL })
   }
 
+  console.log('design:', design)
   return (
     <section className="prepare-draw-note">
       <div className="canvas-tools flex">
