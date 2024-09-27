@@ -18,9 +18,6 @@ const demoNotes = [
       src: '',
       videoId: {},
     },
-    labels: [],
-    isTrash: false,
-    isArchive: false,
   },
   {
     _id: 'YRvFUW',
@@ -47,9 +44,6 @@ const demoNotes = [
       src: '',
       videoId: {},
     },
-    labels: [],
-    isTrash: false,
-    isArchive: false,
   },
   {
     _id: 'g7Lm8l',
@@ -86,9 +80,6 @@ const demoNotes = [
       src: '',
       videoId: {},
     },
-    labels: [],
-    isTrash: false,
-    isArchive: false,
   },
   {
     _id: '3ymyQV',
@@ -104,9 +95,6 @@ const demoNotes = [
       type: 'txt',
       videoId: {},
     },
-    labels: [],
-    isTrash: false,
-    isArchive: false,
   },
 ]
 // const demoNotes2 = [

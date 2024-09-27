@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { ToolsBar } from '../note/tools-bar.jsx'
 import { PrepareTxtNote } from './prepare-txt-note.jsx'
 import { PrepareTodoNote } from './prepare-todo-note.jsx'
-import { PrepareTodoDndNote } from './prepare-todo-dnd-note.jsx'
 import { PrepareImgNote } from './prepare-img-note.jsx'
 // import { PrepareImgFromCanvasNote } from './prepare-img-from-canvas-note.jsx'
 import { PrepareDrawNote } from './prepare-draw-note.jsx'
@@ -73,15 +72,11 @@ function DynamicCmp(props) {
 
     case 'todo':
       return (
-        <PrepareTodoDndNote
+        <PrepareTodoNote
           info={props.info}
           changeContent={props.changeContent}
         />
       )
-    //  return <PrepareTodoNote
-    //     info={props.info}
-    //     changeContent={props.changeContent}
-    //   />
 
     case 'img':
       // return <PrepareImgFromCanvasNote changeContent={props.changeContent} />

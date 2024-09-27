@@ -77,11 +77,11 @@ function DynamicCmp(props) {
           info={props.info}
           changeContent={props.changeContent}
         />
+        // <PrepareTodoNote
+        //   info={props.info}
+        //   changeContent={props.changeContent}
+        // />
       )
-    //  return <PrepareTodoNote
-    //     info={props.info}
-    //     changeContent={props.changeContent}
-    //   />
 
     case 'img':
       // return <PrepareImgFromCanvasNote changeContent={props.changeContent} />

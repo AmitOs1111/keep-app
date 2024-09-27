@@ -72,12 +72,11 @@ function DynamicCmp(props) {
       )
 
     case 'todo':
-      return (
-        <PrepareTodoDndNote
-          info={props.info}
-          changeContent={props.changeContent}
-        />
-      )
+      return
+      ;<PrepareTodoDndNote
+        info={props.info}
+        changeContent={props.changeContent}
+      />
     //  return <PrepareTodoNote
     //     info={props.info}
     //     changeContent={props.changeContent}

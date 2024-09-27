@@ -65,6 +65,7 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
 }
 
 function DynamicCmp(props) {
+  console.log('props.cmpType:', props.cmpType)
   switch (props.cmpType) {
     case 'txt':
       return (
@@ -72,12 +73,11 @@ function DynamicCmp(props) {
       )
 
     case 'todo':
-      return (
-        <PrepareTodoDndNote
-          info={props.info}
-          changeContent={props.changeContent}
-        />
-      )
+      return
+      ;<PrepareTodoDndNote
+        info={props.info}
+        changeContent={props.changeContent}
+      />
     //  return <PrepareTodoNote
     //     info={props.info}
     //     changeContent={props.changeContent}

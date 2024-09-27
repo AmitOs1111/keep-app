@@ -78,10 +78,6 @@ function DynamicCmp(props) {
           changeContent={props.changeContent}
         />
       )
-    //  return <PrepareTodoNote
-    //     info={props.info}
-    //     changeContent={props.changeContent}
-    //   />
 
     case 'img':
       // return <PrepareImgFromCanvasNote changeContent={props.changeContent} />
@@ -94,3 +90,7 @@ function DynamicCmp(props) {
     // return <GuestModal onSetFilterByEdit={props.onSetFilterByEdit} />
   }
 }
+// <PrepareTodoNote
+//   info={props.info}
+//   changeContent={props.changeContent}
+// />
