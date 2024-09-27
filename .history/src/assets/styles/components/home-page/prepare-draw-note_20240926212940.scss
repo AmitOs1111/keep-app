@@ -1,0 +1,29 @@
+.prepare-draw-note {
+  .canvas-tools {
+    // background-color: aqua;
+
+    button {
+      border: 1px solid $clr5;
+      border-radius: 0.4em;
+      padding: 5px;
+      margin: 5px;
+      i {
+        color: $clr5;
+        font-size: 18px;
+      }
+
+      &.palette {
+        position: relative;
+        input {
+          //   opacity: 0;
+          z-index: -1;
+          width: 20px;
+        }
+        i {
+          position: absolute;
+          top: -5px;
+        }
+      }
+    }
+  }
+}

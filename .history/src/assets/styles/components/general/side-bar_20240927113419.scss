@@ -1,0 +1,81 @@
+.side-bar {
+  background-color: #fff;
+  transition: opacity 0.4s ease-out;
+  width: 60px;
+  height: 100vh;
+  transition: width 0.3s ease; 
+   overflow: hidden; 
+   position: fixed;
+    top: 0; 
+    left: 0; 
+  z-index: 10;
+
+  ul {
+    // min-height: 100vh;
+
+    li {
+      margin-block: 0px;
+      padding: 10px 0px;
+      .side-bar-icon {
+        color: $clr5;
+      }
+   
+
+      &.active {
+        background-color: #fdefc3;
+        border-radius: 0 1em 1em 0;
+      }
+
+      &:hover:not(.active) {
+        background-color: $clr3;
+        border-radius: 0 1em 1em 0;
+      }
+    }
+
+    &:hover {
+      border-right: $main-border;
+      box-shadow: 7px 6px 5px -5px grey;
+     
+    }
+  }
+}
+ /* Basic sidebar styling */ 
+ .sidebar { 
+  width: 60px;
+   height: 100vh;
+   transition: width 0.3s ease; 
+    overflow: hidden; 
+    position: fixed;
+     top: 0; 
+     left: 0; 
+    } 
+
+    /* Hover effect to expand the sidebar */ 
+    .sidebar:hover {
+      width: 200px; 
+    }
+     /* Sidebar navigation styling */ 
+     .sidebar-nav { 
+      list-style: none;
+       padding: 0;
+        margin: 0; 
+      } 
+      .sidebar-item { 
+        display: flex;
+         align-items: 
+         center; padding:
+          20px; 
+          color: #ecf0f1;
+           cursor: pointer; 
+           transition: background-color 0.3s; 
+          } 
+          .sidebar-item:hover {
+             background-color: #34495e; 
+            
+            } 
+            /* Icon styling */ 
+            .icon {
+               font-size: 24px;
+                margin-right: 20px; 
+              } 
+              /* Text styling: Initially hidden, shown when the sidebar expands */ .text { opacity: 0; white-space: nowrap; transition: opacity 0.3s ease; } /* Show text when the sidebar is hovered */ .sidebar:hover .text { opacity: 1; } ```

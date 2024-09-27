@@ -1,0 +1,27 @@
+.modal-tools-bar {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 0.5em;
+  border: $main-border;
+  box-shadow: $main-box-shadow;
+
+  &.style {
+    top: 4px;
+    left: 50%;
+  }
+
+  .more-modal {
+    li {
+      background-color: #ec3c3c;
+      width: 100px;
+      font-size: 14px;
+      &:hover {
+        border-radius: 0.4em;
+      }
+    }
+  }
+}

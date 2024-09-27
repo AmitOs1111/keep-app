@@ -1,0 +1,46 @@
+// SETUP
+@import 'setup/typography';
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+
+// BASICS
+@import 'basics/helpers';
+@import 'basics/base';
+@import 'basics/layout';
+
+// PAGES
+// @import 'pages/dark-screen.scss';
+
+// COMPONENTs
+//----------general app---------
+@import 'components/general/app-loader.scss';
+@import 'components/general/user-msg.scss';
+@import 'components/general/side-bar.scss';
+@import 'components/general/edit-content-note.scss';
+@import 'components/general/trash-note.scss';
+@import 'components/general/archive-note.scss';
+// @import 'components/footer/app-footer.scss';
+
+//----------Header-app---------
+@import 'components/header/app-header.scss';
+
+//----------Home-page---------
+@import 'components/home-page/home-page.scss';
+@import 'components/home-page/btn-prepare-note.scss';
+@import 'components/home-page/prepare-note.scss';
+@import 'components/home-page/note-list.scss';
+@import 'components/home-page/preview-note.scss';
+
+//----------tools-bar---------
+@import 'components/tools-bar/tools-bar.scss';
+@import 'components/tools-bar/modal-tools-bar.scss';
+@import 'components/tools-bar/style-modal.scss';
+@import 'components/tools-bar/more-modal.scss';
+
+//----------search---------
+@import 'components/search/main-search.scss';
+@import 'components/search/search-by-type.scss';
+@import 'components/search/search-by-label.scss';
+@import 'components/search/search-by-category.scss';
+@import 'components/search/search-by-color.scss';

@@ -1,0 +1,37 @@
+.prepare-note {
+  padding: 10px;
+  // background-color: aqua;
+  padding: 0;
+  padding: 10px 15px;
+  border-radius: 0.8em;
+
+  .header-prepare-note {
+    input {
+      font-size: 18px;
+      width: 100%;
+    }
+    i {
+      color: $clr5;
+      font-size: 18px;
+    }
+  }
+
+  .main-prepare-note {
+    textarea {
+      font-size: 14px;
+      padding-block: 10px;
+      width: 100%;
+    }
+  }
+
+  .note-footer {
+    button {
+      font-size: 18px;
+      padding: 7px;
+      border-radius: 0.4em;
+      &:hover {
+        background-color: $clr3;
+      }
+    }
+  }
+}
