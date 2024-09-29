@@ -80,6 +80,10 @@ function DynamicCmp(props) {
           changeContent={props.changeContent}
         />
       )
+    //  return <PrepareTodoNote
+    //     info={props.info}
+    //     changeContent={props.changeContent}
+    //   />
 
     case 'img':
       // return <PrepareImgFromCanvasNote changeContent={props.changeContent} />
@@ -90,10 +94,5 @@ function DynamicCmp(props) {
 
     case 'video':
       return <PrepareVideoNote changeContent={props.changeContent} />
-
-    case 'map':
-      return (
-        <PrepareMapNote changeContent={props.changeContent} info={props.info} />
-      )
   }
 }

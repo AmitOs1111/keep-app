@@ -29,8 +29,8 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
 
   function onAddNote() {
     const newNote = { style, info }
-    // console.log('newNote :', newNote)
-    addNoteToList(newNote)
+    console.log('newNote :', newNote)
+    // addNoteToList(newNote)
   }
 
   if (!info) return <h2>Loading...</h2>

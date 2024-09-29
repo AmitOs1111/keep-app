@@ -29,7 +29,7 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
 
   function onAddNote() {
     const newNote = { style, info }
-    // console.log('newNote :', newNote)
+    console.log('newNote :', newNote)
     addNoteToList(newNote)
   }
 
