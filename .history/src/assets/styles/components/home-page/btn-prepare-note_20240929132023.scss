@@ -1,0 +1,25 @@
+.btn-prepare-note {
+  // background-color: aquamarine;
+  height: 46px;
+  padding: 10px 20px;
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    color: $clr5;
+    background-color: antiquewhite;
+    width: 100%;
+    text-align: start;
+  }
+
+  ul {
+    li {
+      margin-inline-start: 25px;
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 20px;
+        color: $clr5;
+      }
+    }
+  }
+}

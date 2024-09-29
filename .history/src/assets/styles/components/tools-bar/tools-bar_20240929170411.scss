@@ -1,0 +1,25 @@
+.tools-bar {
+  position: relative;
+  // background-color: aqua;
+  z-index: 10;
+  ul {
+    margin-block: 5px;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      &:hover {
+        background-color: $clr3;
+        border-radius: 50%;
+      }
+
+      i {
+        font-size: 14px;
+        color: $clr5;
+      }
+    }
+  }
+}
