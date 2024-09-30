@@ -9,7 +9,7 @@ export function ToolsBar({
   copyNote = null,
   addLabel = null,
   changeContent,
-  note = null,
+  note,
 }) {
   const [typeModal, setTypeModal] = useState(null)
 

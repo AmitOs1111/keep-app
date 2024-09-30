@@ -10,7 +10,7 @@ export function SharingModal({ note }) {
 
   function getContent() {
     const info = currNote.current.info
-    // console.log('info:', info)
+    console.log('info:', info)
     switch (info.type) {
       case 'txt':
         return info.txt

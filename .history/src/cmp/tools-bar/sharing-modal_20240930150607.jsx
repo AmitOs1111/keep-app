@@ -10,13 +10,13 @@ export function SharingModal({ note }) {
 
   function getContent() {
     const info = currNote.current.info
-    // console.log('info:', info)
+    console.log('info:', info)
     switch (info.type) {
       case 'txt':
         return info.txt
 
       case 'todo':
-        return info.todos.map((todo) => todo.txt + '\n').join('')
+        return `${info.todos.map((todo, idx) => <h3>{todo.txt}</h3>)}`
 
       case 'video':
         return info.video.url

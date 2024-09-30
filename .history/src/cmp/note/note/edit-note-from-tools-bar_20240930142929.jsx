@@ -35,7 +35,7 @@ export function EditNoteFromToolsBar({ note, changeHasLoaded = null }) {
     const { info, style } = note
     addNote({ info, style })
   }
-
+  console.log('note:', note)
   return (
     <section className="edit-note">
       <ToolsBar
@@ -44,7 +44,6 @@ export function EditNoteFromToolsBar({ note, changeHasLoaded = null }) {
         moveToArchive={moveToArchive}
         copyNote={copyNote}
         addLabel={addLabel}
-        note={note}
       />
     </section>
   )

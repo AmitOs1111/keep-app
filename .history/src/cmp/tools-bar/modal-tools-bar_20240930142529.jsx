@@ -38,7 +38,7 @@ function DynamicCmp(props) {
       return <StyleModal changeColor={props.changeColor} />
 
     case 'sharing':
-      return <SharingModal note={props.note} />
+      return <SharingModal note={note} />
 
     case 'reminder':
       return (

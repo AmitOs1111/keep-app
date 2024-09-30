@@ -9,7 +9,6 @@ export function ToolsBar({
   copyNote = null,
   addLabel = null,
   changeContent,
-  note = null,
 }) {
   const [typeModal, setTypeModal] = useState(null)
 
@@ -67,7 +66,6 @@ export function ToolsBar({
           addLabel={addLabel}
           onClickedTool={onClickedTool}
           changeContent={changeContent}
-          note={note}
         />
       )}
     </section>

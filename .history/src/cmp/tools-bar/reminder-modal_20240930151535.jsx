@@ -15,6 +15,7 @@ export function ReminderModal({ changeContent, note }) {
     changeContent({ reminder: filterByReminder })
   }
 
+  console.log('filterByReminder:', filterByReminder)
   return (
     <section className="reminder-modal flex column">
       <input

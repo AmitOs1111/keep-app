@@ -2,10 +2,11 @@ import { useForm } from '../../customHooks/useForm'
 
 export function ReminderModal({ changeContent, note }) {
   const existsReminder = note ? note.info.reminder : ''
-
+  console.log('note:', note)
+  console.log('existsReminder :', existsReminder)
   const [filterByReminder, setFilterByReminder, handelChange] = useForm(
     existsReminder || {
-      date: '2024-10-03',
+      date: '24/11/2024',
       time: '20:00',
       repetition: '20:00',
     }
@@ -15,6 +16,7 @@ export function ReminderModal({ changeContent, note }) {
     changeContent({ reminder: filterByReminder })
   }
 
+  console.log('filterByReminder:', filterByReminder)
   return (
     <section className="reminder-modal flex column">
       <input

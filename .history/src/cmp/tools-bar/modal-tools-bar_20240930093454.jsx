@@ -12,7 +12,6 @@ export function ModalToolsBar({
   addLabel,
   onClickedTool,
   changeContent,
-  note = { note },
 }) {
   return (
     <section
@@ -26,7 +25,6 @@ export function ModalToolsBar({
         addLabel={addLabel}
         onClickedTool={onClickedTool}
         changeContent={changeContent}
-        note={note}
       />
     </section>
   )
@@ -38,12 +36,10 @@ function DynamicCmp(props) {
       return <StyleModal changeColor={props.changeColor} />
 
     case 'sharing':
-      return <SharingModal note={props.note} />
+      return <SharingModal />
 
     case 'reminder':
-      return (
-        <ReminderModal changeContent={props.changeContent} note={props.note} />
-      )
+      return <ReminderModal changeContent={changeContent} />
 
     case 'more':
       return (

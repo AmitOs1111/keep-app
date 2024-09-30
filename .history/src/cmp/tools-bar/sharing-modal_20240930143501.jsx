@@ -8,30 +8,14 @@ export function SharingModal({ note }) {
     console.log('sendToWhatsApp():')
   }
 
-  function getContent() {
-    const info = currNote.current.info
-    // console.log('info:', info)
-    switch (info.type) {
-      case 'txt':
-        return info.txt
-
-      case 'todo':
-        return info.todos.map((todo) => todo.txt + '\n').join('')
-
-      case 'video':
-        return info.video.url
-    }
-  }
-
   function sendEmail() {
+    // console.log('currNote.current:', currNote.current)
     if (!currNote.current) return
     const templateParams = {
       to_name: 'Amit',
-      from_name: 'Keep-App',
-      title: currNote.current.info.title, // Your note content
-      txt: getContent(), // Your note content
+      message: note, // Your note content
     }
-    console.log('templateParams:', templateParams)
+
     emailjs
       .send(
         'service_i7a9hsn',

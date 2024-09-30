@@ -29,7 +29,7 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
 
   function onAddNote() {
     const newNote = { style, info }
-    // console.log('newNote :', newNote)
+    console.log('newNote :', newNote)
     addNoteToList(newNote)
   }
 
@@ -60,11 +60,7 @@ export function PrepareNote({ addNoteToList, typeNote, note = null }) {
 
       <div className="note-footer flex space-between align-center">
         <button onClick={() => onAddNote()}>close</button>
-        <ToolsBar
-          changeColor={changeColor}
-          changeContent={changeContent}
-          note={note}
-        />
+        <ToolsBar changeColor={changeColor} changeContent={changeContent} />
       </div>
     </section>
   )
