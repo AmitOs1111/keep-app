@@ -1,0 +1,11 @@
+.language-switcher {
+  position: relative;
+
+  .dropdown-menu {
+    background-color: antiquewhite;
+    position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    border: $main-border;
+  }
+}

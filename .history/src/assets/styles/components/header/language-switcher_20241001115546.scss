@@ -1,0 +1,21 @@
+.language-switcher {
+  position: relative;
+
+  .dropdown-menu {
+    // background-color: antiquewhite;
+    position: absolute;
+    width: 150px;
+    background-color: #fff;
+    border: $main-border;
+    border-radius: 0.4em;
+    text-align: start;
+    li {
+      transition: 0.4s hover ease-in-out;
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: $clr3;
+      }
+    }
+  }
+}

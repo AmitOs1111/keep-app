@@ -10,7 +10,7 @@ import App from './App'
 import { store } from './store/store'
 import { Provider } from 'react-redux'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
-import './locales/i18n'
+import './locales/i18next'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
