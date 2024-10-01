@@ -1,0 +1,37 @@
+.btn-prepare-note {
+  // background-color: aquamarine;
+  height: 46px;
+  padding: 10px 20px;
+  h3 {
+    width: 100%;
+    text-align: start;
+    margin: 0;
+    font-size: 18px;
+    color: $clr5;
+    cursor: pointer;
+  }
+
+  ul {
+    li {
+      margin-inline-start: 25px;
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 20px;
+        color: $clr5;
+        cursor: pointer;
+      }
+    }
+  }
+  @include for-mobile-layout {
+    h3 {
+      font-size: 12px;
+    }
+  }
+
+  @include for-tablet-layout {
+    h3 {
+      font-size: 18px;
+    }
+  }
+}

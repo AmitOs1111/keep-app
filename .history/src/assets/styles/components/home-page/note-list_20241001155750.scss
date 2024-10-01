@@ -1,0 +1,34 @@
+.note-list {
+  gap: 20px;
+  margin-inline-start: 40px;
+
+  @include for-mobile-layout {
+    background-color: rgb(202, 232, 113);
+    column-count: 1;
+  }
+
+  @include for-tablet-layout {
+    background-color: rgb(134, 225, 16);
+    column-count: 2;
+  }
+
+  @include for-narrow-layout {
+    background-color: rgb(37, 172, 239);
+    column-count: 3;
+  }
+
+  @include for-normal-layout {
+    background-color: rgb(151, 66, 242);
+    column-count: 4;
+  }
+
+  @include for-wide-layout {
+    background-color: rgb(233, 112, 170);
+    column-count: 5;
+  }
+
+  @include for-extra-wide-layout {
+    background-color: antiquewhite;
+    column-count: 7;
+  }
+}

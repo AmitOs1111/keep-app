@@ -1,0 +1,28 @@
+.note-list {
+  gap: 20px;
+  margin-inline-start: 50px;
+
+  @include for-mobile-layout {
+    column-count: 1;
+  }
+
+  @include for-tablet-layout {
+    column-count: 2;
+  }
+
+  @include for-narrow-layout {
+    column-count: 3;
+  }
+
+  @include for-normal-layout {
+    column-count: 4;
+  }
+
+  @include for-wide-layout {
+    column-count: 5;
+  }
+
+  @include for-extra-wide-layout {
+    column-count: 6;
+  }
+}

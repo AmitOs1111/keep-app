@@ -1,0 +1,28 @@
+.home-page {
+  background-color: aquamarine;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    minmax(10px, 1fr)
+    minmax(auto, 1600px)
+    minmax(10px, 1fr);
+
+  > * {
+    grid-column: 2;
+  }
+
+  > *.full {
+    grid-column: 1 / -1;
+  }
+
+  .prepare-note-index {
+    margin: auto;
+    border-radius: 0.8em;
+    border: $main-border;
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    width: 600px;
+    margin-block: 20px;
+  }
+}

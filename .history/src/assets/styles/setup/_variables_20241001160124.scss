@@ -1,0 +1,34 @@
+// COLOR PALETTE
+$clr1: #fff;
+$clr2: #202123; //first color text
+$clr3: #f1f3f4; //bg input
+$clr4: #dadce0; //color main border
+// $clr4: darken($clr3, 30%);
+$clr5: #5f6368; //second color text
+// $clr7: darken($clr5, 30%);
+$clr6: #a1a1a1; // color checkbox note
+
+//MAIN_BORDER
+$main-border: 1px solid $clr4;
+//BOX_SHADOW
+$main-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+  inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+// LAYOUT
+$layoutPaddingMobile: 10px;
+$layoutPaddingTablet: 20px;
+$layoutPaddingNarrow: 30px;
+$layoutPaddingNormal: 50px;
+$layoutPaddingWide: 80px;
+
+// LAYOUT BREAKPOINTS
+$break-mobile: 530px; //for 550px
+$break-tablet: 680px; //for 740px
+$break-narrow: 980px; //950px
+$break-normal: 1240px; //for 1140px
+$break-wide: 1480px; //for 1640px
+
+$padded-break-mobile: $break-mobile + $layoutPaddingMobile * 2;
+$padded-break-Tablet: $break-tablet + $layoutPaddingTablet * 2;
+$padded-break-narrow: $break-narrow + $layoutPaddingNarrow * 2;
+$padded-break-normal: $break-normal + $layoutPaddingNormal * 2;
+$padded-break-wide: $break-wide + $layoutPaddingWide * 2;

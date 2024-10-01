@@ -1,0 +1,83 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  border-bottom: $main-border;
+  color: $clr5;
+  background-color: #fff;
+  z-index: 20;
+
+  .container-logo {
+    margin-inline-start: 20px;
+    .app-logo {
+      h1 {
+        font-size: 22px;
+        margin: 0;
+        margin-inline-end: 10px;
+      }
+      img {
+        width: 40px;
+        height: 44px;
+      }
+    }
+    .btn-menu {
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      &:hover {
+        border-radius: 50%;
+        background-color: $clr3;
+      }
+    }
+  }
+
+  .container-search {
+    background-color: $clr3;
+    border-radius: 0.4em;
+    // margin: auto;
+    margin-inline-start: 40px;
+    margin-block: 10px;
+
+    button {
+      padding: 12.5px 0px;
+      width: 50px;
+      font-size: 18px;
+      margin-inline-start: 10px;
+      justify-content: center;
+      margin: auto;
+      i {
+        color: $clr5;
+      }
+    }
+  }
+
+  @include for-mobile-layout {
+    .container-search {
+      background-color: antiquewhite;
+      input {
+        display: none;
+      }
+    }
+  }
+
+  @include for-tablet-layout {
+    .container-search {
+      width: 50vw;
+      background-color: rgb(94, 229, 96);
+      input {
+        display: block;
+        font-size: 18px;
+        width: 100%;
+        border: none;
+        background: none;
+
+        margin-inline-start: 10px;
+      }
+    }
+  }
+
+  @include for-narrow-layout {
+    .container-search {
+      background-color: rgb(205, 158, 251);
+    }
+  }
+}
