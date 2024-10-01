@@ -6,10 +6,11 @@ export function SharingModal({ note }) {
 
   function sendNoteToWhatsApp() {
     const info = currNote.current.info
-
-    const msgNote = `${info.title.trim()}
-    
-    ${getContent().trim()}`
+    // console.log(' info:', info)
+    const msgNote = `
+    ${info.title.trim()}
+    ${getContent().trim()}
+    `.trim()
 
     // const msgNote = { title: info.title, txt: getContent() }
     const phoneNumber = '972502158919' // Replace with the recipient's phone number in international format (without + or special characters)

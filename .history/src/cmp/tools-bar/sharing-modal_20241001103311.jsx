@@ -4,14 +4,8 @@ import { useRef } from 'react'
 export function SharingModal({ note }) {
   const currNote = useRef({ ...note })
 
-  function sendNoteToWhatsApp() {
-    const info = currNote.current.info
-
-    const msgNote = `${info.title.trim()}
-    
-    ${getContent().trim()}`
-
-    // const msgNote = { title: info.title, txt: getContent() }
+  function sendNoteToWhatsApp(currNote) {
+    const msgNote = { title: currNote.info.title, txt: getContent() }
     const phoneNumber = '972502158919' // Replace with the recipient's phone number in international format (without + or special characters)
     const message = encodeURIComponent(JSON.stringify(msgNote)) // URL-encode the note content to handle special characters and spaces
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
@@ -28,7 +22,7 @@ export function SharingModal({ note }) {
         return info.txt
 
       case 'todo':
-        return info.todos.map((todo) => todo.txt).join('\n')
+        return info.todos.map((todo) => todo.txt + '\n').join('')
 
       case 'video':
         return info.video.url
